@@ -1,486 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S&K Wood Floor Specialists | London & South East</title>
-  <meta
-    name="description"
-    content="S&K Wood Floor Specialists provide wood floor sanding, restoration and installation across London and the South East. Call or WhatsApp for a fast quote."
-  />
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f1eb;
-      color: #1f1f1f;
-      line-height: 1.5;
-    }
-    img {
-      max-width: 100%;
-      display: block;
-    }
-    a {
-      text-decoration: none;
-    }
-    .container {
-      width: min(1100px, 92%);
-      margin: 0 auto;
-    }
-    .topbar {
-      background: #151515;
-      color: white;
-      padding: 14px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .brand h2 {
-      margin: 0;
-      font-size: 1.3rem;
-    }
-    .brand p {
-      margin: 4px 0 0;
-      opacity: 0.8;
-      font-size: 0.95rem;
-    }
-    .btn-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 20px;
-      border-radius: 10px;
-      font-weight: bold;
-      text-align: center;
-    }
-    .btn-call {
-      background: #c89b6d;
-      color: white;
-    }
-    .btn-whatsapp {
-      background: #25D366;
-      color: white;
-    }
-    .hero {
-      background:
-        linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)),
-        url("20260330_141142.jpg") center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 90px 20px;
-    }
-    .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 4.2rem);
-      margin: 0 0 14px;
-      line-height: 1.1;
-    }
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto 28px;
-      font-size: 1.1rem;
-    }
-    section {
-      padding: 56px 0;
-    }
-    .section-white {
-      background: white;
-    }
-    .section-soft {
-      background: #efe8dd;
-    }
-    .section-dark {
-      background: #1f1a17;
-      color: white;
-    }
-    h2.section-title {
-      text-align: center;
-      font-size: 2rem;
-      margin: 0 0 14px;
-    }
-    .section-lead {
-      max-width: 760px;
-      margin: 0 auto 28px;
-      text-align: center;
-      color: #555;
-    }
-    .why-grid,
-    .services-grid,
-    .gallery-grid,
-    .steps-grid,
-    .pricing-grid {
-      display: grid;
-      gap: 20px;
-    }
-    .why-grid,
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .gallery-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .steps-grid,
-    .pricing-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .card {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-    }
-    .card-body {
-      padding: 18px;
-    }
-    .card img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
-    .service-box,
-    .why-box,
-    .step-box,
-    .price-box {
-      background: white;
-      border-radius: 16px;
-      padding: 22px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-    }
-    .service-box {
-      border-left: 6px solid #c89b6d;
-    }
-    .price-box {
-      text-align: center;
-    }
-    .price-box h3,
-    .step-box h3,
-    .service-box h3,
-    .why-box h3 {
-      margin-top: 0;
-    }
-    .price {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #c89b6d;
-      margin: 10px 0 6px;
-    }
-    .step-number {
-      width: 42px;
-      height: 42px;
-      background: #c89b6d;
-      color: white;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
-    .quote-box {
-      max-width: 760px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-    }
-    .quote-box input,
-    .quote-box textarea {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 14px;
-      border: 1px solid #d2c6b7;
-      border-radius: 10px;
-      font: inherit;
-    }
-    .quote-box textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-    .quote-box button {
-      width: 100%;
-      padding: 15px;
-      border: none;
-      border-radius: 10px;
-      background: #111;
-      color: white;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .cta-row {
-      margin-top: 16px;
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    footer {
-      background: #151515;
-      color: white;
-      text-align: center;
-      padding: 28px 20px 90px;
-    }
-    .sticky-bar {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      z-index: 200;
-    }
-    .sticky-bar a {
-      text-align: center;
-      padding: 15px 10px;
-      color: white;
-      font-weight: bold;
-    }
-    .sticky-call {
-      background: black;
-    }
-    .sticky-whatsapp {
-      background: #25D366;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S&K Wood Floor Specialists</title>
 
-    @media (max-width: 900px) {
-      .why-grid,
-      .services-grid,
-      .gallery-grid,
-      .steps-grid,
-      .pricing-grid {
-        grid-template-columns: 1fr;
-      }
-      .card img {
-        height: 220px;
-      }
-      .hero {
-        padding: 72px 20px;
-      }
-    }
-  </style>
+<style>
+body { margin:0; font-family:Arial; background:#f5f5f5; }
+h1,h2,h3 { margin:0 0 10px; }
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url("images/20260330_141142.jpg") center/cover no-repeat;
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+}
+
+.btn {
+  display:inline-block;
+  padding:15px 25px;
+  margin:10px;
+  border-radius:6px;
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.call { background:#c89b6d; }
+.whatsapp { background:#25D366; }
+
+.section {
+  padding:40px 20px;
+  text-align:center;
+  background:white;
+}
+
+.services, .gallery {
+  display:grid;
+  gap:15px;
+  max-width:900px;
+  margin:auto;
+}
+
+.services { grid-template-columns:1fr; }
+.gallery { grid-template-columns:1fr 1fr; }
+
+.card {
+  background:#eee;
+  padding:20px;
+  border-radius:8px;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:8px;
+}
+
+form input, form textarea {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:1px solid #ccc;
+}
+
+form button {
+  width:100%;
+  padding:15px;
+  background:black;
+  color:white;
+  border:none;
+}
+
+</style>
 </head>
+
 <body>
 
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">
-        <h2>S&K Wood Floor Specialists</h2>
-        <p>London & the South East</p>
-      </div>
-      <div class="btn-row">
-        <a class="btn btn-call" href="tel:07711987399">📞 Call 07711 987399</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
-      </div>
+<!-- HERO -->
+<section class="hero">
+  <h1>Professional Wood Flooring Specialists</h1>
+  <p>Sanding, Restoration & Installation Across London</p>
+
+  <a href="tel:07711987399" class="btn call">📞 Call Now</a>
+  <a href="https://wa.me/447711987399" class="btn whatsapp">💬 WhatsApp</a>
+</section>
+
+<!-- WHY -->
+<section class="section">
+  <h2>Why Choose Us?</h2>
+  <p>✔ 10+ Years Experience</p>
+  <p>✔ Dust-Free Sanding</p>
+  <p>✔ High Quality Finish</p>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="card">
+      <h3>Floor Sanding</h3>
+      <p>Restore your wooden floors to a smooth finish.</p>
     </div>
-  </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Professional Wood Flooring Specialists</h1>
-      <p>Sanding, Restoration & Installation Across London and the South East</p>
-      <div class="btn-row" style="justify-content:center;">
-        <a class="btn btn-call" href="tel:07711987399">📞 Call Now</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 Send Photos on WhatsApp</a>
-      </div>
+    <div class="card">
+      <h3>Floor Installation</h3>
+      <p>Professional fitting of hardwood & engineered flooring.</p>
     </div>
-  </section>
 
-  <section class="section-white">
-    <div class="container">
-      <h2 class="section-title">Why Choose Us?</h2>
-      <p class="section-lead">A strong first impression matters. These trust points help visitors pick up the phone faster.</p>
-      <div class="why-grid">
-        <div class="why-box">
-          <h3>10+ Years Experience</h3>
-          <p>Experienced in floor sanding, fitting, refinishing and restoration work across a wide range of properties.</p>
-        </div>
-        <div class="why-box">
-          <h3>Dust-Free Sanding</h3>
-          <p>Cleaner sanding process for homes and businesses with a more professional finish.</p>
-        </div>
-        <div class="why-box">
-          <h3>High Quality Finish</h3>
-          <p>Attention to detail from preparation through to final finish and protection.</p>
-        </div>
-        <div class="why-box">
-          <h3>Fast Response</h3>
-          <p>Call or WhatsApp for a quick quote, especially if you can send clear job photos.</p>
-        </div>
-      </div>
+    <div class="card">
+      <h3>Floor Restoration</h3>
+      <p>Bring old floors back to life.</p>
     </div>
-  </section>
-
-  <section class="section-soft">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-lead">Clear service sections help the site convert better and rank better.</p>
-      <div class="services-grid">
-        <div class="service-box">
-          <h3>Floor Sanding</h3>
-          <p>Restore your wooden floors to a smooth, clean and modern finish.</p>
-        </div>
-        <div class="service-box">
-          <h3>Floor Installation</h3>
-          <p>Professional fitting of hardwood, engineered flooring and premium parquet layouts.</p>
-        </div>
-        <div class="service-box">
-          <h3>Floor Restoration</h3>
-          <p>Bring old or damaged floors back to life with repairs, sanding and refinishing.</p>
-        </div>
-        <div class="service-box">
-          <h3>Parquet & Herringbone</h3>
-          <p>High-end herringbone and parquet work for customers who want a premium look.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-white">
-    <div class="container">
-      <h2 class="section-title">Recent Work</h2>
-      <p class="section-lead">These are your uploaded images already matched into the gallery.</p>
-      <div class="gallery-grid">
-        <article class="card">
-          <img src="20260330_141132.jpg" alt="Wood flooring project image 1">
-          <div class="card-body">
-            <h3>Featured Project</h3>
-            <p>Use this slot to show one of your stronger room transformation shots.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="20260330_141210.jpg" alt="Wood flooring project image 2">
-          <div class="card-body">
-            <h3>Installed & Finished</h3>
-            <p>A clean finished floor image helps visitors trust the quality straight away.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="20260330_153348.jpg" alt="Wood flooring project image 3">
-          <div class="card-body">
-            <h3>Restoration Work</h3>
-            <p>Another real project image gives more proof and makes the site feel established.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="20260331_125534.jpg" alt="Wood flooring project image 4">
-          <div class="card-body">
-            <h3>Premium Finish</h3>
-            <p>Showcase the type of finish and detail customers can expect.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="20260331_125550.jpg" alt="Wood flooring project image 5">
-          <div class="card-body">
-            <h3>Another Completed Job</h3>
-            <p>Use multiple real jobs to reduce hesitation and build trust.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="20260330_141142.jpg" alt="Hero image duplicate used in gallery">
-          <div class="card-body">
-            <h3>Wide Room View</h3>
-            <p>This image also works well as a supporting gallery shot if needed.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-dark">
-    <div class="container">
-      <h2 class="section-title">Transparent Pricing</h2>
-      <p class="section-lead" style="color:#e9e1d6;">Simple guide pricing helps build trust before somebody even contacts you.</p>
-      <div class="pricing-grid">
-        <div class="price-box">
-          <h3>Sanding</h3>
-          <div class="price">£25–£35</div>
-          <div>per m²</div>
-        </div>
-        <div class="price-box">
-          <h3>Sand & Finish</h3>
-          <div class="price">£35–£55</div>
-          <div>per m²</div>
-        </div>
-        <div class="price-box">
-          <h3>Repairs</h3>
-          <div class="price">From £100</div>
-          <div>depending on work</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-white">
-    <div class="container">
-      <h2 class="section-title">How It Works</h2>
-      <p class="section-lead">Keep the process simple and more people will enquire.</p>
-      <div class="steps-grid">
-        <div class="step-box">
-          <div class="step-number">1</div>
-          <h3>Send Photos</h3>
-          <p>Message photos on WhatsApp for a quick first look at the job.</p>
-        </div>
-        <div class="step-box">
-          <div class="step-number">2</div>
-          <h3>Get a Quote</h3>
-          <p>Receive a fast quote or any follow-up questions needed.</p>
-        </div>
-        <div class="step-box">
-          <div class="step-number">3</div>
-          <h3>Book Your Date</h3>
-          <p>Choose a convenient date for sanding, repairs or installation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-soft">
-    <div class="container">
-      <h2 class="section-title">Get a Free Quote</h2>
-      <p class="section-lead">Calls and WhatsApp messages are both welcome. The form gives you another way to capture enquiries.</p>
-
-      <div class="quote-box">
-        <form action="https://formsubmit.co/keirh@hotmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="New Flooring Quote Request">
-          <input type="hidden" name="_next" value="https://www.skwoodfloorspecialists.co.uk/">
-
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <textarea name="message" placeholder="Describe your job"></textarea>
-
-          <button type="submit">Get Quote</button>
-        </form>
-
-        <p style="text-align:center; margin:18px 0 10px;">Or call / WhatsApp for faster response</p>
-
-        <div class="cta-row">
-          <a class="btn btn-call" href="tel:07711987399">📞 Call 07711 987399</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <strong>S&K Wood Floor Specialists</strong><br>
-    07711 987399 • London & the South East
-  </footer>
-
-  <div class="sticky-bar">
-    <a href="tel:07711987399" class="sticky-call">📞 Call</a>
-    <a href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" class="sticky-whatsapp" target="_blank" rel="noreferrer">💬 WhatsApp</a>
   </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section">
+  <h2>Recent Work</h2>
+
+  <div class="gallery">
+    <img src="images/20260330_141132.jpg">
+    <img src="images/20260330_141210.jpg">
+    <img src="images/20260330_153348.jpg">
+    <img src="images/20260331_125534.jpg">
+    <img src="images/20260331_125550.jpg">
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section">
+  <h2>Get a Free Quote</h2>
+
+  <form action="https://formsubmit.co/keirh@hotmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <textarea name="message" placeholder="Describe your job"></textarea>
+
+    <button type="submit">Get Quote</button>
+  </form>
+
+  <br>
+
+  <a href="tel:07711987399" class="btn call">Call Now</a>
+  <a href="https://wa.me/447711987399" class="btn whatsapp">WhatsApp</a>
+</section>
 
 </body>
-        </html>
+</html>
