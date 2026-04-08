@@ -1,238 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>S&K Wood Floor Specialists | London & South East</title>
-<meta name="description" content="S&K Wood Floor Specialists provide floor sanding, floor installation, restoration, parquet and herringbone flooring across London and the South East. Call or WhatsApp for a fast quote.">
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f5f1eb;color:#1f1f1f;line-height:1.5}
-img{max-width:100%;display:block}
-a{text-decoration:none}
-.container{width:min(1120px,92%);margin:0 auto}
-.topbar{background:#151515;color:#fff;padding:14px 0;position:sticky;top:0;z-index:100}
-.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.brand h2{margin:0;font-size:1.3rem}
-.brand p{margin:4px 0 0;opacity:.82;font-size:.95rem}
-.btn-row{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 20px;border-radius:10px;font-weight:bold;text-align:center}
-.btn-call{background:#c89b6d;color:#fff}
-.btn-whatsapp{background:#25D366;color:#fff}
-.btn-dark{background:#111;color:#fff}
-.hero{
-background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url("images/hero-herringbone.jpg") center/cover no-repeat;
-color:#fff;text-align:center;padding:90px 20px
-}
-.hero h1{font-size:clamp(2.2rem,5vw,4.2rem);margin:0 0 14px;line-height:1.1}
-.hero p{max-width:760px;margin:0 auto 28px;font-size:1.1rem}
-section{padding:56px 0}
-.section-white{background:#fff}
-.section-soft{background:#efe8dd}
-.section-dark{background:#1f1a17;color:#fff}
-.section-title{text-align:center;font-size:2rem;margin:0 0 14px}
-.section-lead{max-width:760px;margin:0 auto 28px;text-align:center;color:#555}
-.grid-2,.grid-3,.services-grid{display:grid;gap:20px}
-.grid-2{grid-template-columns:repeat(2,1fr)}
-.grid-3,.services-grid{grid-template-columns:repeat(3,1fr)}
-.card,.service-box,.info-box,.quote-box{
-background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.08)
-}
-.card-body,.service-box,.info-box,.quote-box{padding:20px}
-.card img{width:100%;height:240px;object-fit:cover}
-.service-box{border-top:6px solid #c89b6d}
-.service-box h3,.info-box h3{margin-top:0}
-.quote-box{max-width:760px;margin:0 auto}
-.quote-box input,.quote-box textarea{
-width:100%;padding:14px;margin-bottom:14px;border:1px solid #d2c6b7;border-radius:10px;font:inherit
-}
-.quote-box textarea{min-height:130px;resize:vertical}
-.quote-box button{
-width:100%;padding:15px;border:none;border-radius:10px;background:#111;color:#fff;font-size:1rem;font-weight:bold;cursor:pointer
-}
-.review{font-style:italic}
-footer{background:#151515;color:#fff;text-align:center;padding:28px 20px 90px}
-.sticky-bar{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;z-index:200}
-.sticky-bar a{text-align:center;padding:15px 10px;color:#fff;font-weight:bold}
-.sticky-call{background:#000}
-.sticky-whatsapp{background:#25D366}
-@media (max-width:900px){
-.grid-2,.grid-3,.services-grid{grid-template-columns:1fr}
-.card img{height:220px}
-.hero{padding:72px 20px}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S&K Wood Floor Specialists | Floor Sanding, Restoration & Installation</title>
+  <meta
+    name="description"
+    content="S&K Wood Floor Specialists provide floor sanding, floor restoration, repairs, parquet and herringbone installation across London and the South East. Call or WhatsApp for a fast quote."
+  />
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f1eb;
+      color: #1f1f1f;
+      line-height: 1.5;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: #151515;
+      color: white;
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand h2 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+    .brand p {
+      margin: 4px 0 0;
+      opacity: 0.82;
+      font-size: 0.95rem;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+    .btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+    .btn-call {
+      background: #c89b6d;
+      color: white;
+    }
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    .btn-dark {
+      background: #111;
+      color: white;
+    }
+    .btn-light {
+      background: white;
+      color: #111;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)),
+        url("images/hero-herringbone.jpg") center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 90px 20px 80px;
+    }
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .badge {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      margin: 0 0 14px;
+      line-height: 1.08;
+    }
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 26px;
+      font-size: 1.08rem;
+    }
+
+    section {
+      padding: 56px 0;
+    }
+    .section-white { background: white; }
+    .section-soft { background: #efe8dd; }
+    .section-dark { background: #1f1a17; color: white; }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 0 0 14px;
+    }
+    .section-lead {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      text-align: center;
+      color: #555;
+    }
+    .section-dark .section-lead {
+      color: #e5ddd2;
+    }
+
+    .grid-2,
+    .grid-3,
+    .services-grid,
+    .pricing-grid,
+    .areas-grid,
+    .reviews-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-2,
+    .areas-grid,
+    .reviews-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3,
+    .services-grid,
+    .pricing-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card,
+    .service-box,
+    .info-box,
+    .price-box,
+    .review-box,
+    .quote-box {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .card-body,
+    .service-box,
+    .info-box,
+    .price-box,
+    .review-box,
+    .quote-box {
+      padding: 20px;
+    }
+
+    .service-box {
+      border-top: 6px solid #c89b6d;
+    }
+
+    .service-box h3,
+    .info-box h3,
+    .price-box h3,
+    .review-box h3 {
+      margin-top: 0;
+    }
+
+    .price-box {
+      text-align: center;
+    }
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #c89b6d;
+      margin: 10px 0 6px;
+    }
+
+    .mini-note {
+      font-size: 0.92rem;
+      color: #666;
+    }
+
+    .quote-box {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    .quote-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .quote-box input,
+    .quote-box textarea,
+    .quote-box select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d2c6b7;
+      border-radius: 10px;
+      font: inherit;
+      margin-bottom: 14px;
+      background: white;
+    }
+
+    .quote-box textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .quote-box button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #111;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .trust-strip {
+      background: #fffaf4;
+      border-top: 1px solid #eadfce;
+      border-bottom: 1px solid #eadfce;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      text-align: center;
+      padding: 18px 0;
+      font-weight: bold;
+    }
+
+    .cta-banner {
+      background: #c89b6d;
+      color: white;
+      text-align: center;
+      padding: 24px 20px;
+    }
+    .cta-banner h2 {
+      margin: 0 0 8px;
+      font-size: 1.8rem;
+    }
+    .cta-banner p {
+      margin: 0 0 16px;
+    }
+
+    footer {
+      background: #151515;
+      color: white;
+      text-align: center;
+      padding: 28px 20px 90px;
+    }
+
+    .sticky-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      z-index: 200;
+    }
+    .sticky-bar a {
+      text-align: center;
+      padding: 15px 10px;
+      color: white;
+      font-weight: bold;
+    }
+    .sticky-call { background: black; }
+    .sticky-whatsapp { background: #25D366; }
+
+    @media (max-width: 900px) {
+      .grid-2,
+      .grid-3,
+      .services-grid,
+      .pricing-grid,
+      .areas-grid,
+      .reviews-grid,
+      .quote-form-grid,
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card img {
+        height: 220px;
+      }
+
+      .hero {
+        padding: 76px 20px 70px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header class="topbar">
-  <div class="container topbar-inner">
-    <div class="brand">
-      <h2>S&K Wood Floor Specialists</h2>
-      <p>London & the South East</p>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <h2>S&K Wood Floor Specialists</h2>
+        <p>London & the South East</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-call" href="tel:07711987399">📞 Call 07711 987399</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
+      </div>
     </div>
-    <div class="btn-row">
-      <a class="btn btn-call" href="tel:07711987399">📞 Call 07711 987399</a>
-      <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
-    </div>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <div class="container">
-    <h1>Wood Floor Sanding, Restoration & Installation</h1>
-    <p>Professional wood floor specialists serving homes and businesses across London and the South East. Fast quotes, quality workmanship and direct WhatsApp contact.</p>
-    <div class="btn-row" style="justify-content:center;">
-      <a class="btn btn-call" href="tel:07711987399">📞 Call Now</a>
-      <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 Send Photos on WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<section class="section-white">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-lead">Browse each service to see the type of workmanship we provide and the sort of jobs we take on.</p>
-    <div class="services-grid">
-      <div class="service-box">
-        <h3>Floor Sanding</h3>
-        <p>Restore worn wooden floors to a smooth, clean and modern finish.</p>
-        <a class="btn btn-dark" href="floor-sanding.html">View Floor Sanding</a>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badges">
+        <span class="badge">Dust-Free Sanding</span>
+        <span class="badge">Fast Quotes</span>
+        <span class="badge">London & South East</span>
       </div>
-      <div class="service-box">
-        <h3>Floor Installation</h3>
-        <p>Professional fitting of hardwood, engineered flooring and subfloor preparation.</p>
-        <a class="btn btn-dark" href="floor-installation.html">View Installation</a>
-      </div>
-      <div class="service-box">
-        <h3>Floor Restoration</h3>
-        <p>Bring tired or damaged floors back to life with repairs and refinishing.</p>
-        <a class="btn btn-dark" href="floor-restoration.html">View Restoration</a>
-      </div>
-      <div class="service-box">
-        <h3>Parquet & Herringbone</h3>
-        <p>Premium parquet and herringbone work with detailed finishing and border work.</p>
-        <a class="btn btn-dark" href="parquet-herringbone.html">View Parquet Work</a>
-      </div>
-      <div class="service-box">
-        <h3>Repairs</h3>
-        <p>Board replacement, damaged sections, gap work and restoration-focused repairs.</p>
-        <a class="btn btn-dark" href="floor-restoration.html">View Repairs</a>
-      </div>
-      <div class="service-box">
-        <h3>Quotes by WhatsApp</h3>
-        <p>Send over photos for a fast first estimate before booking a visit.</p>
-        <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">Send Photos</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-soft">
-  <div class="container">
-    <h2 class="section-title">Recent Work</h2>
-    <p class="section-lead">A selection of real jobs showing completed finishes and the standard of our workmanship.</p>
-    <div class="grid-3">
-      <article class="card">
-        <img src="images/HerringboneYoungs.jpg" alt="Herringbone flooring project">
-        <div class="card-body">
-          <h3>Premium Herringbone Finish</h3>
-          <p>High-end patterned flooring for clients who want a standout finish.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="images/20260330_141132.jpg" alt="Wood floor restoration">
-        <div class="card-body">
-          <h3>Floor Restoration</h3>
-          <p>Clean finished floors that show the quality of the final result.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="images/20260331_125534.jpg" alt="Wood floor completed project">
-        <div class="card-body">
-          <h3>Completed Project</h3>
-          <p>Wide room shots help customers picture what their own floor could look like.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section-white">
-  <div class="container">
-    <h2 class="section-title">Why Choose Us?</h2>
-    <div class="grid-2">
-      <div class="info-box">
-        <h3>10+ Years Experience</h3>
-        <p>Experience across floor sanding, installation, restoration, parquet and herringbone work.</p>
-      </div>
-      <div class="info-box">
-        <h3>Dust-Free Sanding</h3>
-        <p>Cleaner sanding process with a more professional finish for homes and businesses.</p>
-      </div>
-      <div class="info-box">
-        <h3>Fast Response</h3>
-        <p>Call or WhatsApp for a quick quote, especially if you can send clear job photos.</p>
-      </div>
-      <div class="info-box">
-        <h3>London & South East Coverage</h3>
-        <p>Available across London and surrounding South East areas for the right jobs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-dark">
-  <div class="container">
-    <h2 class="section-title">What Customers Want From a Flooring Specialist</h2>
-    <div class="grid-3">
-      <div class="info-box">
-        <h3>Clear Communication</h3>
-        <p>Fast, straightforward quotes and clear expectations before work starts.</p>
-      </div>
-      <div class="info-box">
-        <h3>Reliable Workmanship</h3>
-        <p>Attention to detail from preparation through to the final finish.</p>
-      </div>
-      <div class="info-box">
-        <h3>Proof of Quality</h3>
-        <p>Real job photos and completed projects that show the standard of work.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-soft">
-  <div class="container">
-    <h2 class="section-title">Get a Free Quote</h2>
-    <p class="section-lead">Calls and WhatsApp messages are both welcome. The form gives you another way to capture enquiries.</p>
-    <div class="quote-box">
-      <form action="https://formsubmit.co/keirh@hotmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Flooring Quote Request">
-        <input type="hidden" name="_next" value="https://www.skwoodfloorspecialists.co.uk/">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <textarea name="message" placeholder="Describe your job"></textarea>
-        <button type="submit">Get Quote</button>
-      </form>
-      <div class="btn-row" style="justify-content:center;margin-top:16px;">
+      <h1>Floor Sanding, Restoration & Installation That Adds Real Value</h1>
+      <p>
+        Professional wood floor specialists for homes and businesses across London and the South East.
+        Send photos on WhatsApp for a fast quote or call directly to discuss your job.
+      </p>
+      <div class="btn-row" style="justify-content:center;">
         <a class="btn btn-call" href="tel:07711987399">📞 Call Now</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 Send Photos on WhatsApp</a>
       </div>
     </div>
+  </section>
+
+  <div class="trust-strip">
+    <div class="container trust-grid">
+      <div>10+ Years Experience</div>
+      <div>Residential & Commercial</div>
+      <div>Fast Response</div>
+      <div>High Quality Finish</div>
+    </div>
   </div>
-</section>
 
-<footer>
-  <strong>S&K Wood Floor Specialists</strong><br>
-  07711 987399 • London & the South East
-</footer>
+  <section class="section-white" id="quote">
+    <div class="container">
+      <h2 class="section-title">Get a Fast Quote</h2>
+      <p class="section-lead">
+        Looking for a floor sanding quote or installation price? Fill this in or send photos on WhatsApp for the fastest response.
+      </p>
 
-<div class="sticky-bar">
-  <a href="tel:07711987399" class="sticky-call">📞 Call</a>
-  <a href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" class="sticky-whatsapp" target="_blank" rel="noreferrer">💬 WhatsApp</a>
-</div>
+      <div class="quote-box">
+        <form action="https://formsubmit.co/keirh@hotmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Flooring Quote Request">
+          <input type="hidden" name="_next" value="https://www.skwoodfloorspecialists.co.uk/">
+
+          <div class="quote-form-grid">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+          </div>
+
+          <div class="quote-form-grid">
+            <input type="text" name="postcode" placeholder="Postcode / Area">
+            <select name="service">
+              <option value="">Select Service</option>
+              <option>Floor Sanding</option>
+              <option>Floor Installation</option>
+              <option>Floor Restoration</option>
+              <option>Parquet & Herringbone</option>
+              <option>Repairs</option>
+            </select>
+          </div>
+
+          <textarea name="message" placeholder="Describe your job, room size, floor type or anything useful"></textarea>
+
+          <button type="submit">Get My Free Quote</button>
+        </form>
+
+        <div class="btn-row" style="justify-content:center; margin-top:16px;">
+          <a class="btn btn-call" href="tel:07711987399">📞 Call Now</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-lead">
+        Browse each service to see the type of workmanship we provide and the kind of jobs we take on.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-box">
+          <h3>Floor Sanding</h3>
+          <p>Restore worn wooden floors to a smooth, clean and modern finish.</p>
+          <a class="btn btn-dark" href="floor-sanding.html">View Floor Sanding</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Floor Installation</h3>
+          <p>Professional fitting of hardwood, engineered flooring and prepared subfloors.</p>
+          <a class="btn btn-dark" href="floor-installation.html">View Installation</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Floor Restoration</h3>
+          <p>Bring tired or damaged floors back to life with repairs, sanding and refinishing.</p>
+          <a class="btn btn-dark" href="floor-restoration.html">View Restoration</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Parquet & Herringbone</h3>
+          <p>Premium parquet and herringbone work with precise layout and finishing.</p>
+          <a class="btn btn-dark" href="parquet-herringbone.html">View Parquet Work</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Repairs</h3>
+          <p>Damaged boards, worn areas and floor issues repaired properly and cleanly.</p>
+          <a class="btn btn-dark" href="floor-restoration.html">View Repairs</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Fast WhatsApp Quotes</h3>
+          <p>Send job photos for a quick estimate before arranging anything further.</p>
+          <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">Send Photos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white">
+    <div class="container">
+      <h2 class="section-title">Floor Sanding Prices</h2>
+      <p class="section-lead">
+        Clear guide pricing helps customers understand what to expect before they get in touch.
+      </p>
+
+      <div class="pricing-grid">
+        <div class="price-box">
+          <h3>Sanding Only</h3>
+          <div class="price">£25–£35</div>
+          <p>per m²</p>
+          <p class="mini-note">Typical guide price depending on condition and area.</p>
+        </div>
+
+        <div class="price-box">
+          <h3>Sand & Finish</h3>
+          <div class="price">£35–£55</div>
+          <p>per m²</p>
+          <p class="mini-note">Includes sanding plus finish depending on floor type.</p>
+        </div>
+
+        <div class="price-box">
+          <h3>Repairs</h3>
+          <div class="price">From £100</div>
+          <p>per job</p>
+          <p class="mini-note">Best quoted once photos or details have been reviewed.</p>
+        </div>
+      </div>
+
+      <p class="section-lead" style="margin-top:20px;">
+        Minimum job sizes and access can affect pricing. Send photos on WhatsApp for the quickest estimate.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="container">
+      <h2 class="section-title">Recent Work</h2>
+      <p class="section-lead">
+        Real project images help customers trust your workmanship and picture what their own floor could look like.
+      </p>
+
+      <div class="grid-3">
+        <article class="card">
+          <img src="images/HerringboneYoungs.jpg" alt="Premium herringbone flooring project">
+          <div class="card-body">
+            <h3>Premium Herringbone Finish</h3>
+            <p>High-end patterned flooring with a clean, premium final result.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/20260330_141132.jpg" alt="Floor restoration project">
+          <div class="card-body">
+            <h3>Floor Restoration</h3>
+            <p>Completed restoration work showing a cleaner and sharper finish.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/20260331_125534.jpg" alt="Completed wood floor project">
+          <div class="card-body">
+            <h3>Completed Project</h3>
+            <p>Wide room photography gives customers confidence in the final look.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/20260330_141210.jpg" alt="Floor sanding result">
+          <div class="card-body">
+            <h3>Sanded & Finished</h3>
+            <p>A clean final finish that helps show consistency across jobs.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/20260331_125550.jpg" alt="Wood floor fitting result">
+          <div class="card-body">
+            <h3>Detail & Finish</h3>
+            <p>Strong close and mid-room shots help show the quality more clearly.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/hero-herringbone.jpg" alt="Featured wood flooring image">
+          <div class="card-body">
+            <h3>Featured Room View</h3>
+            <p>Your strongest images should appear more than once across the homepage.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white">
+    <div class="container">
+      <h2 class="section-title">Why Choose S&K?</h2>
+      <div class="grid-2">
+        <div class="info-box">
+          <h3>10+ Years Experience</h3>
+          <p>Experience across floor sanding, installation, restoration, parquet and herringbone work.</p>
+        </div>
+        <div class="info-box">
+          <h3>Dust-Free Sanding</h3>
+          <p>Cleaner sanding process with less disruption and a more professional result.</p>
+        </div>
+        <div class="info-box">
+          <h3>Fast Response</h3>
+          <p>Quick quotes and direct communication by phone or WhatsApp.</p>
+        </div>
+        <div class="info-box">
+          <h3>High Quality Finish</h3>
+          <p>Attention to detail from preparation through to the final finish and protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <h2 class="section-title">Areas We Cover</h2>
+      <p class="section-lead">
+        We take on work across London and the South East.
+      </p>
+
+      <div class="areas-grid">
+        <div class="info-box">
+          <h3>London</h3>
+          <p>Floor sanding, restoration, installation and parquet work across London boroughs.</p>
+        </div>
+        <div class="info-box">
+          <h3>South East</h3>
+          <p>Available for suitable jobs across surrounding South East locations as well.</p>
+        </div>
+        <div class="info-box">
+          <h3>Residential Work</h3>
+          <p>Living rooms, bedrooms, hallways, kitchens and full home renovation projects.</p>
+        </div>
+        <div class="info-box">
+          <h3>Commercial Work</h3>
+          <p>Shops, salons, offices and other spaces needing a professional floor finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white">
+    <div class="container">
+      <h2 class="section-title">What Customers Say</h2>
+      <p class="section-lead">
+        Add real reviews here as you collect them. For now, this section improves the structure and trust flow.
+      </p>
+
+      <div class="reviews-grid">
+        <div class="review-box">
+          <h3>Professional Finish</h3>
+          <p>“Really pleased with the result. The floor looks completely transformed.”</p>
+        </div>
+        <div class="review-box">
+          <h3>Fast & Reliable</h3>
+          <p>“Clear communication, turned up on time and the workmanship was spot on.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Get Your Free Quote Today</h2>
+      <p>Limited availability can apply during busy periods — call or WhatsApp for the fastest response.</p>
+      <div class="btn-row" style="justify-content:center;">
+        <a class="btn btn-light" href="tel:07711987399">📞 Call Now</a>
+        <a class="btn btn-dark" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <strong>S&K Wood Floor Specialists</strong><br>
+    07711 987399 • London & the South East
+  </footer>
+
+  <div class="sticky-bar">
+    <a href="tel:07711987399" class="sticky-call">📞 Call</a>
+    <a href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" class="sticky-whatsapp" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+  </div>
 
 </body>
 </html>
