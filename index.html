@@ -1,210 +1,685 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>S&K Wood Floor Specialists</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S&K Wood Floor Specialists | Floor Sanding, Restoration & Installation</title>
+  <meta
+    name="description"
+    content="S&K Wood Floor Specialists provide floor sanding, floor restoration, parquet, herringbone and floor installation across London and the South East. Call or WhatsApp for a fast quote."
+  />
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f1eb;
+      color: #1f1f1f;
+      line-height: 1.5;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
 
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial;background:#f5f1eb;color:#1f1f1f}
-a{text-decoration:none}
-img{max-width:100%}
+    .topbar {
+      background: #151515;
+      color: #fff;
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand h2 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+    .brand p {
+      margin: 4px 0 0;
+      font-size: 0.95rem;
+      opacity: 0.82;
+    }
 
-.container{width:90%;max-width:1100px;margin:auto}
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+    .btn:hover {
+      opacity: 0.94;
+      transform: translateY(-1px);
+    }
+    .btn-call {
+      background: #c89b6d;
+      color: #fff;
+    }
+    .btn-whatsapp {
+      background: #25D366;
+      color: #fff;
+    }
+    .btn-dark {
+      background: #111;
+      color: #fff;
+    }
+    .btn-light {
+      background: #fff;
+      color: #111;
+    }
 
-/* HERO */
-.hero{
-  height:100vh;
-  background:
-  linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
-  url("images/hero-herringbone.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-}
+    .hero {
+      min-height: 92vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("images/hero-flooring.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 30px 20px;
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.36);
+      padding: 34px;
+      border-radius: 18px;
+      max-width: 960px;
+      width: 100%;
+      backdrop-filter: blur(2px);
+    }
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .badge {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+    }
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      line-height: 1.08;
+    }
+    .hero p {
+      margin: 0 auto 24px;
+      max-width: 760px;
+      font-size: 1.08rem;
+      color: #f0f0f0;
+    }
 
-.hero h1{font-size:36px;margin-bottom:10px}
-.hero p{margin-bottom:20px}
+    section {
+      padding: 58px 0;
+    }
+    .section-white {
+      background: #fff;
+    }
+    .section-soft {
+      background: #efe8dd;
+    }
+    .section-dark {
+      background: #1f1a17;
+      color: #fff;
+    }
 
-.btn{
-  padding:14px 20px;
-  margin:5px;
-  display:inline-block;
-  color:white;
-  font-weight:bold;
-  border-radius:6px;
-}
-.call{background:#c89b6d}
-.whatsapp{background:#25D366}
+    .section-title {
+      margin: 0 0 14px;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .section-lead {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      text-align: center;
+      color: #555;
+    }
+    .section-dark .section-lead {
+      color: #e6ddd1;
+    }
 
-/* SECTIONS */
-.section{padding:40px 20px;text-align:center;background:white}
-.section-alt{background:#efe8dd}
+    .grid-2,
+    .grid-3,
+    .services-grid,
+    .pricing-grid,
+    .brands-grid,
+    .areas-grid {
+      display: grid;
+      gap: 20px;
+    }
+    .grid-2,
+    .areas-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-3,
+    .services-grid,
+    .pricing-grid,
+    .brands-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
+    .card,
+    .service-box,
+    .info-box,
+    .price-box,
+    .quote-box,
+    .brand-box {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
 
-.services{
-  max-width:600px;
-  margin:auto;
-  text-align:left;
-}
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
 
-.card{
-  background:#fff;
-  padding:20px;
-  border-radius:10px;
-}
+    .card-body,
+    .service-box,
+    .info-box,
+    .price-box,
+    .quote-box,
+    .brand-box {
+      padding: 20px;
+    }
 
-/* PRICING */
-.pricing{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:15px;
-}
+    .service-box {
+      border-top: 6px solid #c89b6d;
+    }
+    .service-box h3,
+    .info-box h3,
+    .price-box h3 {
+      margin-top: 0;
+    }
 
-/* BRANDS */
-.brands{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:30px;
-}
-.brands img{
-  max-width:120px;
-  margin:auto;
-  filter:grayscale(100%);
-}
+    .price-box {
+      text-align: center;
+    }
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #c89b6d;
+      margin: 10px 0 6px;
+    }
+    .mini-note {
+      font-size: 0.92rem;
+      color: #666;
+    }
 
-/* FORM */
-input,textarea,select{
-  width:100%;
-  padding:12px;
-  margin:5px 0;
-}
-button{
-  width:100%;
-  padding:15px;
-  background:black;
-  color:white;
-  border:none;
-}
+    .quote-box {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .quote-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .quote-box input,
+    .quote-box select,
+    .quote-box textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d2c6b7;
+      border-radius: 10px;
+      font: inherit;
+      margin-bottom: 14px;
+      background: #fff;
+    }
+    .quote-box textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+    .quote-box button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #111;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-/* MOBILE */
-@media(max-width:768px){
-.grid,.pricing,.brands{grid-template-columns:1fr}
-.hero h1{font-size:28px}
-}
-</style>
+    .trust-strip {
+      background: #fffaf4;
+      border-top: 1px solid #eadfce;
+      border-bottom: 1px solid #eadfce;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      text-align: center;
+      padding: 18px 0;
+      font-weight: bold;
+    }
+
+    .brand-box {
+      text-align: center;
+    }
+    .brand-box img {
+      max-width: 140px;
+      margin: 0 auto 12px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.9;
+    }
+
+    .cta-banner {
+      background: #c89b6d;
+      color: #fff;
+      text-align: center;
+      padding: 28px 20px;
+    }
+    .cta-banner h2 {
+      margin: 0 0 10px;
+      font-size: 1.8rem;
+    }
+    .cta-banner p {
+      margin: 0 0 16px;
+    }
+
+    footer {
+      background: #151515;
+      color: #fff;
+      text-align: center;
+      padding: 28px 20px 90px;
+    }
+
+    .sticky-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      z-index: 200;
+    }
+    .sticky-bar a {
+      text-align: center;
+      padding: 15px 10px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .sticky-call {
+      background: #000;
+    }
+    .sticky-whatsapp {
+      background: #25D366;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2,
+      .grid-3,
+      .services-grid,
+      .pricing-grid,
+      .brands-grid,
+      .areas-grid,
+      .quote-form-grid,
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+      .card img {
+        height: 220px;
+      }
+      .hero {
+        min-height: 84vh;
+      }
+      .hero-overlay {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>Wood Floor Sanding, Restoration & Installation</h1>
-    <p>Serving London & the South East</p>
-
-    <a href="tel:07711987399" class="btn call">📞 Call Now</a>
-    <a href="https://wa.me/447711987399" class="btn whatsapp">💬 WhatsApp</a>
-  </div>
-</section>
-
-<!-- QUOTE -->
-<section class="section">
-  <h2>Get a Fast Quote</h2>
-
-  <form action="https://formsubmit.co/keirh@hotmail.com" method="POST">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="tel" name="phone" placeholder="Phone" required>
-    <select name="service">
-      <option>Floor Sanding</option>
-      <option>Installation</option>
-      <option>Restoration</option>
-    </select>
-    <textarea name="message" placeholder="Describe your job"></textarea>
-    <button>Get Quote</button>
-  </form>
-</section>
-
-<!-- SERVICES -->
-<section class="section-alt">
-  <h2>Our Services</h2>
-
-  <div class="services">
-    <h3>Floor Sanding</h3>
-    <p>Restore worn wooden floors.</p>
-    <a href="floor-sanding.html">View</a>
-
-    <h3>Floor Installation</h3>
-    <p>Professional fitting.</p>
-    <a href="floor-installation.html">View</a>
-
-    <h3>Restoration</h3>
-    <p>Bring floors back to life.</p>
-    <a href="floor-restoration.html">View</a>
-
-    <h3>Parquet & Herringbone</h3>
-    <p>Premium patterned floors.</p>
-    <a href="parquet-herringbone.html">View</a>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section">
-  <h2>Floor Sanding Prices</h2>
-
-  <div class="pricing">
-    <div class="card">
-      <h3>£25–£35</h3>
-      <p>Per m² sanding</p>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <h2>S&K Wood Floor Specialists</h2>
+        <p>London & the South East</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-call" href="tel:07711987399">📞 Call 07711 987399</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
+      </div>
     </div>
-    <div class="card">
-      <h3>£35–£55</h3>
-      <p>Sand & finish</p>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-badges">
+        <span class="badge">Dust-Free Sanding</span>
+        <span class="badge">Premium Finishes</span>
+        <span class="badge">London & South East</span>
+      </div>
+      <h1>Wood Floor Sanding, Restoration & Installation</h1>
+      <p>Transforming homes and businesses with professional workmanship, quality products and a finish that lasts.</p>
+      <div class="btn-row" style="justify-content:center;">
+        <a href="tel:07711987399" class="btn btn-call">📞 Call Now</a>
+        <a href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" class="btn btn-whatsapp" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
+      </div>
     </div>
-    <div class="card">
-      <h3>From £100</h3>
-      <p>Repairs</p>
+  </section>
+
+  <div class="trust-strip">
+    <div class="container trust-grid">
+      <div>10+ Years Experience</div>
+      <div>Residential & Commercial</div>
+      <div>Fast Response</div>
+      <div>High Quality Finish</div>
     </div>
   </div>
-</section>
 
-<!-- BRANDS -->
-<section class="section-alt">
-  <h2>Products We Use</h2>
+  <section class="section-white" id="quote">
+    <div class="container">
+      <h2 class="section-title">Get a Fast Quote</h2>
+      <p class="section-lead">Send your details below or message photos on WhatsApp for the quickest response.</p>
 
-  <div class="brands">
-    <img src="images/bona.jpg">
-    <img src="images/junkers.jpg">
-    <img src="images/lagler.jpg">
+      <div class="quote-box">
+        <form action="https://formsubmit.co/keirh@hotmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Flooring Quote Request">
+          <input type="hidden" name="_next" value="https://www.skwoodfloorspecialists.co.uk/">
+
+          <div class="quote-form-grid">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+          </div>
+
+          <div class="quote-form-grid">
+            <input type="text" name="postcode" placeholder="Postcode / Area">
+            <select name="service">
+              <option value="">Select Service</option>
+              <option>Floor Sanding</option>
+              <option>Floor Installation</option>
+              <option>Floor Restoration</option>
+              <option>Parquet & Herringbone</option>
+              <option>Repairs</option>
+            </select>
+          </div>
+
+          <textarea name="message" placeholder="Describe your job, floor type, room size or anything useful"></textarea>
+          <button type="submit">Get My Free Quote</button>
+        </form>
+
+        <div class="btn-row" style="justify-content:center; margin-top:16px;">
+          <a class="btn btn-call" href="tel:07711987399">📞 Call Now</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-lead">Browse each service to see different workmanship, finishes and the type of jobs we take on.</p>
+
+      <div class="services-grid">
+        <div class="service-box">
+          <h3>Floor Sanding</h3>
+          <p>Restore worn wooden floors to a smooth, clean and modern finish.</p>
+          <a class="btn btn-dark" href="floor-sanding.html">View Floor Sanding</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Floor Installation</h3>
+          <p>Professional fitting of hardwood, engineered flooring and prepared subfloors.</p>
+          <a class="btn btn-dark" href="floor-installation.html">View Installation</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Floor Restoration</h3>
+          <p>Bring tired or damaged floors back to life with repairs, sanding and refinishing.</p>
+          <a class="btn btn-dark" href="floor-restoration.html">View Restoration</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Parquet & Herringbone</h3>
+          <p>Premium parquet and herringbone work with precise layout and finishing.</p>
+          <a class="btn btn-dark" href="parquet-herringbone.html">View Parquet Work</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Repairs</h3>
+          <p>Damaged boards, worn areas and floor issues repaired properly and cleanly.</p>
+          <a class="btn btn-dark" href="floor-restoration.html">View Repairs</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Fast WhatsApp Quotes</h3>
+          <p>Send job photos for a quick estimate before arranging anything further.</p>
+          <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">Send Photos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white">
+    <div class="container">
+      <h2 class="section-title">Floor Sanding Prices</h2>
+      <p class="section-lead">Clear guide pricing helps build trust before someone even gets in touch.</p>
+
+      <div class="pricing-grid">
+        <div class="price-box">
+          <h3>Sanding Only</h3>
+          <div class="price">£25–£35</div>
+          <p>per m²</p>
+          <p class="mini-note">Guide price depending on condition, access and area.</p>
+        </div>
+
+        <div class="price-box">
+          <h3>Sand & Finish</h3>
+          <div class="price">£35–£55</div>
+          <p>per m²</p>
+          <p class="mini-note">Includes sanding and finishing depending on floor type.</p>
+        </div>
+
+        <div class="price-box">
+          <h3>Repairs</h3>
+          <div class="price">From £100</div>
+          <p>per job</p>
+          <p class="mini-note">Best quoted from photos or after a quick discussion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="container">
+      <h2 class="section-title">Products & Equipment We Use</h2>
+      <p class="section-lead">Using trusted flooring brands helps deliver a better, longer-lasting finish.</p>
+
+      <div class="brands-grid">
+        <div class="brand-box">
+          <img src="images/bona.jpg" alt="Bona flooring products">
+          <h3>Bona</h3>
+          <p>Professional coatings, oils and finishing systems trusted across the trade.</p>
+        </div>
+
+        <div class="brand-box">
+          <img src="images/junkers.jpg" alt="Junkers wood flooring products">
+          <h3>Junkers</h3>
+          <p>Well-known for quality wood flooring systems and professional-grade materials.</p>
+        </div>
+
+        <div class="brand-box">
+          <img src="images/lagler.jpg" alt="Lagler sanding equipment">
+          <h3>Lägler</h3>
+          <p>Industry-recognised sanding machines used for reliable, high-quality preparation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white">
+    <div class="container">
+      <h2 class="section-title">Recent Work</h2>
+      <p class="section-lead">Real project images help customers trust your workmanship and picture what their own floor could look like.</p>
+
+      <div class="grid-3">
+        <article class="card">
+          <img src="images/HerringboneYoungs.jpg" alt="Premium herringbone flooring project">
+          <div class="card-body">
+            <h3>Premium Herringbone Finish</h3>
+            <p>High-end patterned flooring with a clean, premium final result.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/20260330_141132.jpg" alt="Floor restoration project">
+          <div class="card-body">
+            <h3>Floor Restoration</h3>
+            <p>Completed restoration work showing a cleaner and sharper finish.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/20260331_125534.jpg" alt="Completed wood floor project">
+          <div class="card-body">
+            <h3>Completed Project</h3>
+            <p>Wide room photography helps clients picture the final result more clearly.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/20260330_141210.jpg" alt="Floor sanding result">
+          <div class="card-body">
+            <h3>Sanded & Finished</h3>
+            <p>A clean final finish showing consistency across different jobs.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/20260331_125550.jpg" alt="Wood floor detail">
+          <div class="card-body">
+            <h3>Detail & Finish</h3>
+            <p>Strong close and mid-room shots help show the quality more clearly.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/hero-herringbone.jpg" alt="Featured room view">
+          <div class="card-body">
+            <h3>Featured Room View</h3>
+            <p>Your strongest visuals should appear more than once across the site.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <h2 class="section-title">Why Choose S&K?</h2>
+      <p class="section-lead">A strong first impression matters. These trust points help visitors pick up the phone faster.</p>
+
+      <div class="grid-2">
+        <div class="info-box">
+          <h3>10+ Years Experience</h3>
+          <p>Experience across floor sanding, installation, restoration, parquet and herringbone work.</p>
+        </div>
+
+        <div class="info-box">
+          <h3>Dust-Free Sanding</h3>
+          <p>Cleaner sanding process with less disruption and a more professional result.</p>
+        </div>
+
+        <div class="info-box">
+          <h3>Fast Response</h3>
+          <p>Quick quotes and direct communication by phone or WhatsApp.</p>
+        </div>
+
+        <div class="info-box">
+          <h3>High Quality Finish</h3>
+          <p>Attention to detail from preparation through to the final finish and protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white">
+    <div class="container">
+      <h2 class="section-title">Areas We Cover</h2>
+      <p class="section-lead">We take on work across London and the South East.</p>
+
+      <div class="areas-grid">
+        <div class="info-box">
+          <h3>London</h3>
+          <p>Floor sanding, restoration, installation and parquet work across London boroughs.</p>
+        </div>
+
+        <div class="info-box">
+          <h3>South East</h3>
+          <p>Available for suitable jobs across surrounding South East locations as well.</p>
+        </div>
+
+        <div class="info-box">
+          <h3>Residential Work</h3>
+          <p>Living rooms, bedrooms, hallways, kitchens and full home renovation projects.</p>
+        </div>
+
+        <div class="info-box">
+          <h3>Commercial Work</h3>
+          <p>Shops, salons, offices and other spaces needing a professional floor finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Get Your Free Quote Today</h2>
+      <p>Call now or send photos on WhatsApp for the fastest response.</p>
+      <div class="btn-row" style="justify-content:center;">
+        <a class="btn btn-light" href="tel:07711987399">📞 Call Now</a>
+        <a class="btn btn-dark" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <strong>S&K Wood Floor Specialists</strong><br>
+    07711 987399 • London & the South East
+  </footer>
+
+  <div class="sticky-bar">
+    <a href="tel:07711987399" class="sticky-call">📞 Call</a>
+    <a href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" class="sticky-whatsapp" target="_blank" rel="noreferrer">💬 WhatsApp</a>
   </div>
-</section>
-
-<!-- GALLERY -->
-<section class="section">
-  <h2>Recent Work</h2>
-
-  <div class="grid">
-    <img src="images/HerringboneYoungs.jpg">
-    <img src="images/20260330_141132.jpg">
-    <img src="images/20260330_141142.jpg">
-    <img src="images/20260331_125534.jpg">
-  </div>
-</section>
-
-<!-- AREAS -->
-<section class="section-alt">
-  <h2>Areas We Cover</h2>
-  <p>London, Surrey, Croydon, Wimbledon, Kingston & South East</p>
-</section>
 
 </body>
 </html>
