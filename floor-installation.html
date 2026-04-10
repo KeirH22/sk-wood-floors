@@ -4,25 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Floor Installation | S&K Wood Floor Specialists</title>
-  <meta name="description" content="Professional floor installation across London and the South East. Hardwood, engineered flooring and carefully prepared installations from S&K Wood Floor Specialists." />
+  <meta
+    name="description"
+    content="Professional floor installation across London and the South East. Hardwood, engineered flooring, parquet and carefully prepared installations from S&K Wood Floor Specialists."
+  />
   <style>
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f5f1eb; color: #1f1f1f; line-height: 1.5; }
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-    .container { width: min(1120px, 92%); margin: 0 auto; }
+    html { scroll-behavior: smooth; }
 
-    .topbar { background: #151515; color: white; padding: 14px 0; position: sticky; top: 0; z-index: 100; }
-    .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-    .brand h2 { margin: 0; font-size: 1.3rem; }
-    .brand p { margin: 4px 0 0; font-size: 0.95rem; opacity: 0.82; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f1eb;
+      color: #1f1f1f;
+      line-height: 1.5;
+    }
 
-    .topbar-right { display: flex; align-items: center; gap: 12px; }
-    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
-    .btn { display: inline-block; padding: 14px 20px; border-radius: 10px; font-weight: bold; text-align: center; }
-    .btn-call { background: #c89b6d; color: white; }
-    .btn-whatsapp { background: #25D366; color: white; }
-    .btn-dark { background: #111; color: white; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: #151515;
+      color: white;
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand h2 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    .brand p {
+      margin: 4px 0 0;
+      font-size: 0.95rem;
+      opacity: 0.82;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.94;
+      transform: translateY(-1px);
+    }
+
+    .btn-call {
+      background: #c89b6d;
+      color: white;
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .btn-dark {
+      background: #111;
+      color: white;
+    }
 
     .menu-toggle {
       background: transparent;
@@ -48,13 +129,15 @@
       border-top: 1px solid rgba(255,255,255,0.06);
     }
 
-    .mobile-menu.show { display: block; }
+    .mobile-menu.show {
+      display: block;
+    }
 
     .hero {
-      min-height: 60vh;
+      min-height: 62vh;
       background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("images/20260319_075601.jpg") center/cover no-repeat;
+        linear-gradient(rgba(0,0,0,0.46), rgba(0,0,0,0.46)),
+        url("images/InstallHero.jpg") center/cover no-repeat;
       display: flex;
       align-items: center;
       color: white;
@@ -62,50 +145,207 @@
     }
 
     .hero-content {
-      max-width: 650px;
+      max-width: 680px;
       margin-left: 5%;
       background: rgba(0,0,0,0.24);
       padding: 28px;
       border-radius: 16px;
+      backdrop-filter: blur(2px);
     }
 
-    .hero h1 { margin: 0 0 12px; font-size: clamp(2rem, 4vw, 3.4rem); }
-    .hero p { margin: 0 0 20px; color: #f1f1f1; }
+    .hero-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
 
-    section { padding: 56px 0; }
-    .section-white { background: white; }
-    .section-soft { background: #efe8dd; }
+    .badge {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
 
-    .section-title { text-align: center; font-size: 2rem; margin: 0 0 14px; }
-    .section-lead { max-width: 760px; margin: 0 auto 28px; text-align: center; color: #555; }
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.08;
+    }
 
-    .grid-2, .grid-3 { display: grid; gap: 20px; }
-    .grid-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .hero p {
+      margin: 0 0 20px;
+      color: #f1f1f1;
+      font-size: 1.05rem;
+    }
 
-    .card, .info-box, .quote-box {
+    section {
+      padding: 58px 0;
+    }
+
+    .section-white {
+      background: white;
+    }
+
+    .section-soft {
+      background: #efe8dd;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 0 0 14px;
+    }
+
+    .section-lead {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      text-align: center;
+      color: #555;
+    }
+
+    .grid-2,
+    .grid-3 {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card,
+    .info-box,
+    .quote-box {
       background: white;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 10px 24px rgba(0,0,0,0.08);
     }
 
-    .card img { width: 100%; height: 240px; object-fit: cover; }
-    .card-body, .info-box, .quote-box { padding: 20px; }
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
 
-    .quote-box { max-width: 820px; margin: 0 auto; }
-    .quote-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .card-body,
+    .info-box,
+    .quote-box {
+      padding: 20px;
+    }
 
-    .quote-box input, .quote-box select, .quote-box textarea {
+    .info-box h3 {
+      margin-top: 0;
+    }
+
+    .before-after {
+      text-align: center;
+    }
+
+    .before-after h2 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+    }
+
+    .before-after p {
+      color: #555;
+      margin: 0 0 26px;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 940px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+
+    .slider > img {
+      width: 100%;
+      display: block;
+    }
+
+    .before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      border-right: 2px solid white;
+    }
+
+    .before img {
+      width: 940px;
+      max-width: none;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .handle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 4px;
+      height: 100%;
+      background: white;
+      transform: translateX(-50%);
+      cursor: ew-resize;
+    }
+
+    .handle::after {
+      content: "⇆";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #c89b6d;
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .quote-box {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    .quote-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .quote-box input,
+    .quote-box select,
+    .quote-box textarea {
       width: 100%;
       padding: 14px;
       margin-bottom: 14px;
       border: 1px solid #d2c6b7;
       border-radius: 10px;
       font: inherit;
+      background: white;
     }
 
-    .quote-box textarea { min-height: 130px; resize: vertical; }
+    .quote-box textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
 
     .quote-box button {
       width: 100%;
@@ -119,11 +359,18 @@
       cursor: pointer;
     }
 
-    footer { background: #151515; color: white; text-align: center; padding: 28px 20px 90px; }
+    footer {
+      background: #151515;
+      color: white;
+      text-align: center;
+      padding: 28px 20px 90px;
+    }
 
     .sticky-bar {
       position: fixed;
-      left: 0; right: 0; bottom: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       z-index: 200;
@@ -136,144 +383,255 @@
       font-weight: bold;
     }
 
-    .sticky-call { background: black; }
-    .sticky-whatsapp { background: #25D366; }
+    .sticky-call {
+      background: black;
+    }
+
+    .sticky-whatsapp {
+      background: #25D366;
+    }
 
     @media (max-width: 900px) {
-      .grid-2, .grid-3, .quote-form-grid { grid-template-columns: 1fr; }
-      .hero { justify-content: center; text-align: center; }
-      .hero-content { margin-left: 0; }
-      .desktop-contact { display: none; }
+      .grid-2,
+      .grid-3,
+      .quote-form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        justify-content: center;
+        text-align: center;
+        background-position: center;
+      }
+
+      .hero-content {
+        margin-left: 0;
+      }
+
+      .hero-badges,
+      .btn-row {
+        justify-content: center;
+      }
+
+      .desktop-contact {
+        display: none;
+      }
+
+      .card img {
+        height: 220px;
+      }
+
+      .before img {
+        width: 100%;
+        height: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-<header class="topbar">
-  <div class="container topbar-inner">
-    <div class="brand">
-      <h2>S&K Wood Floor Specialists</h2>
-      <p>London & the South East</p>
-    </div>
-
-    <div class="topbar-right">
-      <div class="btn-row desktop-contact">
-        <a class="btn btn-call" href="tel:07711987399">📞 Call</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20floor%20installation%20quote" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <h2>S&K Wood Floor Specialists</h2>
+        <p>London & the South East</p>
       </div>
-      <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
-    </div>
-  </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="floor-sanding.html">Floor Sanding</a>
-    <a href="floor-installation.html">Floor Installation</a>
-    <a href="floor-restoration.html">Floor Restoration</a>
-    <a href="parquet-herringbone.html">Parquet & Herringbone</a>
-    <a href="#quote">Get Quote</a>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-content">
-    <h1>Professional Floor Installation</h1>
-    <p>Hardwood, engineered flooring and carefully prepared installation work completed across London and the South East.</p>
-    <div class="btn-row">
-      <a class="btn btn-call" href="tel:07711987399">📞 Call Now</a>
-      <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20floor%20installation%20quote" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
-    </div>
-  </div>
-</section>
-
-<section class="section-white">
-  <div class="container">
-    <h2 class="section-title">Installation Work</h2>
-    <p class="section-lead">Good installation starts with correct preparation, careful layout and attention to detail from start to finish.</p>
-
-    <div class="grid-2">
-      <div class="info-box">
-        <h3>Subfloor Preparation</h3>
-        <p>Preparation matters as much as the visible finish. A good base helps the floor perform properly long term.</p>
-      </div>
-      <div class="info-box">
-        <h3>Precision Fitting</h3>
-        <p>Neat fitting, accurate lines and a clean finish all make a major difference to the final look.</p>
+      <div class="topbar-right">
+        <div class="btn-row desktop-contact">
+          <a class="btn btn-call" href="tel:07711987399">📞 Call</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20floor%20installation%20quote" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+        </div>
+        <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="section-soft">
-  <div class="container">
-    <h2 class="section-title">Recent Installation Work</h2>
-    <div class="grid-3">
-      <article class="card">
-        <img src="images/20260319_075601.jpg" alt="Subfloor preparation">
-        <div class="card-body">
-          <h3>Preparation Stage</h3>
-          <p>Proper setup before installation begins.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="images/20260319_075622.jpg" alt="Floor installation setup">
-        <div class="card-body">
-          <h3>Ready for Install</h3>
-          <p>Preparation work that helps set the floor up correctly.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="images/20260320_093529.jpg" alt="Installation progress">
-        <div class="card-body">
-          <h3>Installation Progress</h3>
-          <p>Real active job showing fitting work underway.</p>
-        </div>
-      </article>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="floor-sanding.html">Floor Sanding</a>
+      <a href="floor-installation.html">Floor Installation</a>
+      <a href="floor-restoration.html">Floor Restoration</a>
+      <a href="parquet-herringbone.html">Parquet & Herringbone</a>
+      <a href="#quote">Get Quote</a>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section-white" id="quote">
-  <div class="container">
-    <h2 class="section-title">Get an Installation Quote</h2>
-    <div class="quote-box">
-      <form action="https://formsubmit.co/keirh@hotmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Floor Installation Enquiry">
-        <input type="hidden" name="_next" value="https://www.skwoodfloorspecialists.co.uk/floor-installation.html">
-
-        <div class="quote-form-grid">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-        </div>
-
-        <div class="quote-form-grid">
-          <input type="text" name="postcode" placeholder="Postcode / Area">
-          <input type="text" name="floor_type" placeholder="Floor type / Room size">
-        </div>
-
-        <textarea name="message" placeholder="Tell us about your installation job and send photos on WhatsApp for a faster estimate"></textarea>
-        <button type="submit">Get My Free Quote</button>
-      </form>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badges">
+        <span class="badge">Subfloor Preparation</span>
+        <span class="badge">Precision Fitting</span>
+        <span class="badge">London & South East</span>
+      </div>
+      <h1>Professional Floor Installation</h1>
+      <p>Hardwood, engineered flooring, parquet and patterned floor installation completed with careful preparation, accurate layout and a high-end finish.</p>
+      <div class="btn-row">
+        <a class="btn btn-call" href="tel:07711987399">📞 Call Now</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20floor%20installation%20quote" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
+      </div>
     </div>
+  </section>
+
+  <section class="section-white before-after">
+    <div class="container">
+      <h2>Before & After Installation</h2>
+      <p>Slide to reveal the transformation.</p>
+
+      <div class="slider" id="slider">
+        <img src="images/InstallAfterShot.jpg" alt="After floor installation">
+
+        <div class="before" id="before">
+          <img src="images/InstallBeforeShot.jpg" alt="Before floor installation">
+        </div>
+
+        <div class="handle" id="handle"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="container">
+      <h2 class="section-title">What We Do</h2>
+      <p class="section-lead">Professional installation work starts with proper preparation, careful setting out and attention to the finish from start to end.</p>
+
+      <div class="grid-2">
+        <div class="info-box">
+          <h3>Subfloor Preparation</h3>
+          <p>A good floor starts below the surface. Correct preparation helps the finished floor perform properly long term.</p>
+        </div>
+        <div class="info-box">
+          <h3>Precision Installation</h3>
+          <p>Accurate fitting, straight lines and a clean finish all make a major difference to the final result.</p>
+        </div>
+        <div class="info-box">
+          <h3>Residential & Commercial</h3>
+          <p>Suitable for homes, apartments, retail spaces, bars, restaurants and other commercial interiors.</p>
+        </div>
+        <div class="info-box">
+          <h3>Patterned & Premium Floors</h3>
+          <p>Parquet and detailed installation work completed with a focus on layout, balance and finish quality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white">
+    <div class="container">
+      <h2 class="section-title">Recent Installation Work</h2>
+      <p class="section-lead">A few real examples of installation and fitting work.</p>
+
+      <div class="grid-3">
+        <article class="card">
+          <img src="images/InstallHero.jpg" alt="Completed installation result">
+          <div class="card-body">
+            <h3>Completed Installation</h3>
+            <p>Wide finished room shot showing the scale and final quality of the installation.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/InstallBeforeShot.jpg" alt="Installation preparation">
+          <div class="card-body">
+            <h3>Preparation Stage</h3>
+            <p>Preparation and base condition before the installation work begins.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/InstallAfterShot.jpg" alt="Finished parquet installation">
+          <div class="card-body">
+            <h3>Final Finish</h3>
+            <p>A cleaner, more premium finished surface after installation is complete.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft" id="quote">
+    <div class="container">
+      <h2 class="section-title">Get an Installation Quote</h2>
+      <p class="section-lead">Tell us about the job below or send photos on WhatsApp for a faster estimate.</p>
+
+      <div class="quote-box">
+        <form action="https://formsubmit.co/keirh@hotmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Floor Installation Enquiry">
+          <input type="hidden" name="_next" value="https://www.skwoodfloorspecialists.co.uk/floor-installation.html">
+
+          <div class="quote-form-grid">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+          </div>
+
+          <div class="quote-form-grid">
+            <input type="text" name="postcode" placeholder="Postcode / Area">
+            <input type="text" name="floor_type" placeholder="Floor type / Room size">
+          </div>
+
+          <textarea name="message" placeholder="Tell us about the installation job, floor type and anything else useful"></textarea>
+
+          <button type="submit">Get My Free Quote</button>
+        </form>
+
+        <div class="btn-row" style="justify-content:center; margin-top:16px;">
+          <a class="btn btn-call" href="tel:07711987399">📞 Call Now</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20floor%20installation%20quote" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <strong>S&K Wood Floor Specialists</strong><br>
+    Floor Installation • London & the South East
+  </footer>
+
+  <div class="sticky-bar">
+    <a href="tel:07711987399" class="sticky-call">📞 Call</a>
+    <a href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20floor%20installation%20quote" class="sticky-whatsapp" target="_blank" rel="noreferrer">💬 WhatsApp</a>
   </div>
-</section>
 
-<footer>
-  <strong>S&K Wood Floor Specialists</strong><br>
-  Floor Installation • London & the South East
-</footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
 
-<div class="sticky-bar">
-  <a href="tel:07711987399" class="sticky-call">📞 Call</a>
-  <a href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20floor%20installation%20quote" class="sticky-whatsapp" target="_blank" rel="noreferrer">💬 WhatsApp</a>
-</div>
+    const slider = document.getElementById("slider");
+    const before = document.getElementById("before");
+    const handle = document.getElementById("handle");
 
-<script>
-  function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("show");
-  }
-</script>
+    if (slider && before && handle) {
+      let active = false;
+
+      const move = (x) => {
+        const rect = slider.getBoundingClientRect();
+        let percent = ((x - rect.left) / rect.width) * 100;
+
+        if (percent < 0) percent = 0;
+        if (percent > 100) percent = 100;
+
+        before.style.width = percent + "%";
+        handle.style.left = percent + "%";
+      };
+
+      handle.addEventListener("mousedown", () => active = true);
+      window.addEventListener("mouseup", () => active = false);
+      window.addEventListener("mousemove", (e) => {
+        if (!active) return;
+        move(e.clientX);
+      });
+
+      handle.addEventListener("touchstart", () => active = true);
+      window.addEventListener("touchend", () => active = false);
+      window.addEventListener("touchmove", (e) => {
+        if (!active) return;
+        move(e.touches[0].clientX);
+      });
+
+      slider.addEventListener("click", (e) => move(e.clientX));
+    }
+  </script>
 
 </body>
 </html>
