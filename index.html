@@ -419,6 +419,35 @@
         justify-content: center;
       }
     }
+    .menu-toggle {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 1.8rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  background: #111;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-menu a:hover {
+  background: #222;
+}
+
+.mobile-menu.show {
+  display: block;
+}
   </style>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -452,7 +481,18 @@
         <a href="tel:07711987399" class="btn btn-call">📞 Call Now</a>
         <a href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" class="btn btn-whatsapp" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
       </div>
+      <div class="topbar-right">
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</div>
     </div>
+    <div id="mobileMenu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="floor-sanding.html">Floor Sanding</a>
+  <a href="floor-installation.html">Floor Installation</a>
+  <a href="floor-restoration.html">Floor Restoration</a>
+  <a href="parquet-herringbone.html">Parquet & Herringbone</a>
+  <a href="#quote">Get Quote</a>
+</div>
   </section>
 
   <div class="trust-strip">
