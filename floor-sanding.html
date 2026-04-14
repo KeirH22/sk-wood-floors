@@ -41,7 +41,7 @@
       padding: 14px 0;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -108,10 +108,11 @@
     .menu-toggle {
       background: transparent;
       color: white;
-      border: 1px solid rgba(255,255,255,0.2);
-      font-size: 1.6rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      font-size: 1.55rem;
+      line-height: 1;
       border-radius: 10px;
-      padding: 8px 14px;
+      padding: 10px 14px;
       cursor: pointer;
     }
 
@@ -119,7 +120,14 @@
       display: none;
       background: #111;
       border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 10px 0;
+    }
+
+    .mobile-menu.show {
+      display: block;
+    }
+
+    .mobile-menu .container {
+      padding: 8px 0;
     }
 
     .mobile-menu a {
@@ -127,10 +135,11 @@
       color: white;
       padding: 14px 20px;
       border-top: 1px solid rgba(255,255,255,0.06);
+      border-radius: 8px;
     }
 
-    .mobile-menu.show {
-      display: block;
+    .mobile-menu a:hover {
+      background: rgba(255,255,255,0.06);
     }
 
     .hero {
@@ -427,7 +436,6 @@
       }
     }
   </style>
-  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -448,12 +456,14 @@
     </div>
 
     <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="floor-sanding.html">Floor Sanding</a>
-      <a href="floor-installation.html">Floor Installation</a>
-      <a href="floor-restoration.html">Floor Restoration</a>
-      <a href="parquet-herringbone.html">Parquet & Herringbone</a>
-      <a href="#quote">Get Quote</a>
+      <div class="container">
+        <a href="index.html">Home</a>
+        <a href="floor-sanding.html">Floor Sanding</a>
+        <a href="floor-installation.html">Floor Installation</a>
+        <a href="floor-restoration.html">Floor Restoration</a>
+        <a href="parquet-herringbone.html">Parquet & Herringbone</a>
+        <a href="#quote">Get Quote</a>
+      </div>
     </div>
   </header>
 
@@ -531,7 +541,7 @@
         </article>
 
         <article class="card">
-          <img src="images/SandedParquet.jpg" alt="Completed wood floor">
+          <img src="images/20260330_141132.jpg" alt="Completed wood floor">
           <div class="card-body">
             <h3>Finished Room</h3>
             <p>Wide finished room shot showing the completed look clearly.</p>
