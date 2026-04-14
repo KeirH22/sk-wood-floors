@@ -41,7 +41,7 @@
       padding: 14px 0;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -62,6 +62,12 @@
       margin: 4px 0 0;
       font-size: 0.95rem;
       opacity: 0.82;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .btn-row {
@@ -102,6 +108,47 @@
     .btn-light {
       background: #fff;
       color: #111;
+    }
+
+    .menu-toggle {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      font-size: 1.8rem;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .menu-toggle:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    .mobile-menu {
+      display: none;
+      background: #111;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mobile-menu.show {
+      display: block;
+    }
+
+    .mobile-menu .container {
+      padding: 8px 0;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+    }
+
+    .mobile-menu a:hover {
+      background: #222;
     }
 
     .hero {
@@ -325,12 +372,8 @@
       text-align: center;
     }
 
-    .brand-box img {
-      max-width: 140px;
-      margin: 0 auto 12px;
-      object-fit: contain;
-      filter: grayscale(100%);
-      opacity: 0.9;
+    .brand-box p {
+      margin-bottom: 0;
     }
 
     .cta-banner {
@@ -411,43 +454,15 @@
         border-radius: 14px;
       }
 
-      .hero-badges {
-        justify-content: center;
-      }
-
+      .hero-badges,
       .btn-row {
         justify-content: center;
       }
+
+      .desktop-contact {
+        display: none;
+      }
     }
-    .menu-toggle {
-  background: transparent;
-  color: white;
-  border: 1px solid rgba(255,255,255,0.3);
-  font-size: 1.8rem;
-  padding: 6px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.mobile-menu {
-  display: none;
-  background: #111;
-}
-
-.mobile-menu a {
-  display: block;
-  padding: 14px 20px;
-  color: white;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.mobile-menu a:hover {
-  background: #222;
-}
-
-.mobile-menu.show {
-  display: block;
-}
   </style>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -459,9 +474,25 @@
         <h2>S&K Wood Floor Specialists</h2>
         <p>London & the South East</p>
       </div>
-      <div class="btn-row">
-        <a class="btn btn-call" href="tel:07711987399">📞 Call 07711 987399</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
+
+      <div class="topbar-right">
+        <div class="btn-row desktop-contact">
+          <a class="btn btn-call" href="tel:07711987399">📞 Call 07711 987399</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="container">
+        <a href="index.html">Home</a>
+        <a href="floor-sanding.html">Floor Sanding</a>
+        <a href="floor-installation.html">Floor Installation</a>
+        <a href="floor-restoration.html">Floor Restoration</a>
+        <a href="parquet-herringbone.html">Parquet & Herringbone</a>
+        <a href="#quote">Get Quote</a>
       </div>
     </div>
   </header>
@@ -481,18 +512,7 @@
         <a href="tel:07711987399" class="btn btn-call">📞 Call Now</a>
         <a href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" class="btn btn-whatsapp" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
       </div>
-      <div class="topbar-right">
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-</div>
     </div>
-    <div id="mobileMenu" class="mobile-menu">
-  <a href="index.html">Home</a>
-  <a href="floor-sanding.html">Floor Sanding</a>
-  <a href="floor-installation.html">Floor Installation</a>
-  <a href="floor-restoration.html">Floor Restoration</a>
-  <a href="parquet-herringbone.html">Parquet & Herringbone</a>
-  <a href="#quote">Get Quote</a>
-</div>
   </section>
 
   <div class="trust-strip">
@@ -622,28 +642,28 @@
   </section>
 
   <section class="section-soft">
-  <div class="container">
-    <h2 class="section-title">Products & Equipment We Use</h2>
-    <p class="section-lead">We use trusted professional brands to help deliver a cleaner, more durable and higher quality finish.</p>
+    <div class="container">
+      <h2 class="section-title">Products & Equipment We Use</h2>
+      <p class="section-lead">We use trusted professional brands to help deliver a cleaner, more durable and higher quality finish.</p>
 
-    <div class="brands-grid">
-      <div class="brand-box">
-        <h3>Bona</h3>
-        <p>Professional coatings, finishes and floor treatment systems trusted across the trade.</p>
-      </div>
+      <div class="brands-grid">
+        <div class="brand-box">
+          <h3>Bona</h3>
+          <p>Professional coatings, finishes and floor treatment systems trusted across the trade.</p>
+        </div>
 
-      <div class="brand-box">
-        <h3>Junkers</h3>
-        <p>Well-known for quality wood flooring systems and dependable professional materials.</p>
-      </div>
+        <div class="brand-box">
+          <h3>Junkers</h3>
+          <p>Well-known for quality wood flooring systems and dependable professional materials.</p>
+        </div>
 
-      <div class="brand-box">
-        <h3>Lägler</h3>
-        <p>Industry-recognised sanding machinery used for reliable preparation and quality results.</p>
+        <div class="brand-box">
+          <h3>Lägler</h3>
+          <p>Industry-recognised sanding machinery used for reliable preparation and quality results.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section class="section-white">
     <div class="container">
@@ -703,28 +723,28 @@
   </section>
 
   <section class="section-white">
-  <div class="container">
-    <h2 class="section-title">What Customers Say</h2>
-    <p class="section-lead">We focus on quality workmanship, clear communication and a professional finish from start to end.</p>
+    <div class="container">
+      <h2 class="section-title">What Customers Say</h2>
+      <p class="section-lead">We focus on quality workmanship, clear communication and a professional finish from start to end.</p>
 
-    <div class="grid-3">
-      <div class="info-box">
-        <h3>Professional & Reliable</h3>
-        <p>"Very professional job from start to finish. Great communication and a high quality result."</p>
-      </div>
+      <div class="grid-3">
+        <div class="info-box">
+          <h3>Professional & Reliable</h3>
+          <p>"Very professional job from start to finish. Great communication and a high quality result."</p>
+        </div>
 
-      <div class="info-box">
-        <h3>Excellent Finish</h3>
-        <p>"The floor looked completely transformed once the work was complete. Very happy with the result."</p>
-      </div>
+        <div class="info-box">
+          <h3>Excellent Finish</h3>
+          <p>"The floor looked completely transformed once the work was complete. Very happy with the result."</p>
+        </div>
 
-      <div class="info-box">
-        <h3>Would Recommend</h3>
-        <p>"Reliable, tidy and clearly takes pride in the work. Would happily recommend."</p>
+        <div class="info-box">
+          <h3>Would Recommend</h3>
+          <p>"Reliable, tidy and clearly takes pride in the work. Would happily recommend."</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section class="section-white">
     <div class="container">
@@ -775,6 +795,12 @@
     <a href="tel:07711987399" class="sticky-call">📞 Call</a>
     <a href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" class="sticky-whatsapp" target="_blank" rel="noreferrer">💬 WhatsApp</a>
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
