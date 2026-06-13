@@ -102,6 +102,11 @@
       color: #fff;
     }
 
+    .btn-email {
+      background: #111;
+      color: #fff;
+    }
+
     .btn-dark {
       background: #111;
       color: #fff;
@@ -121,6 +126,10 @@
       border-radius: 8px;
       cursor: pointer;
       line-height: 1;
+    }
+
+    .menu-toggle:hover {
+      background: rgba(255,255,255,0.08);
     }
 
     .mobile-menu {
@@ -143,6 +152,10 @@
       color: white;
       border-top: 1px solid rgba(255,255,255,0.1);
       border-radius: 8px;
+    }
+
+    .mobile-menu a:hover {
+      background: #222;
     }
 
     .hero {
@@ -208,11 +221,6 @@
       background: #efe8dd;
     }
 
-    .section-dark {
-      background: #1f1a17;
-      color: #fff;
-    }
-
     .section-title {
       margin: 0 0 14px;
       text-align: center;
@@ -226,7 +234,6 @@
       color: #555;
     }
 
-    .grid-2,
     .grid-3,
     .services-grid,
     .pricing-grid,
@@ -234,10 +241,6 @@
     .trust-grid {
       display: grid;
       gap: 20px;
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(2, 1fr);
     }
 
     .grid-3,
@@ -386,7 +389,26 @@
       background: #151515;
       color: #fff;
       text-align: center;
-      padding: 28px 20px 90px;
+      padding: 28px 20px 100px;
+    }
+
+    footer a {
+      color: #c89b6d;
+      font-weight: bold;
+    }
+
+    .footer-links {
+      margin-top: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .legal-info {
+      margin-top: 18px;
+      font-size: 0.9rem;
+      color: #d8d8d8;
     }
 
     .sticky-bar {
@@ -395,45 +417,31 @@
       right: 0;
       bottom: 0;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       z-index: 200;
     }
 
     .sticky-bar a {
       text-align: center;
-      padding: 15px 10px;
+      padding: 15px 8px;
       color: #fff;
       font-weight: bold;
+      font-size: 0.92rem;
     }
 
     .sticky-call {
       background: #000;
     }
 
+    .sticky-email {
+      background: #c89b6d;
+    }
+
     .sticky-whatsapp {
       background: #25D366;
     }
-    .footer-links {
-  margin-top: 14px;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
-  color: #c89b6d;
-  font-weight: bold;
-}
-
-.legal-info {
-  margin-top: 18px;
-  font-size: 0.9rem;
-  color: #d8d8d8;
-}
 
     @media (max-width: 900px) {
-      .grid-2,
       .grid-3,
       .services-grid,
       .pricing-grid,
@@ -487,6 +495,7 @@
       <div class="topbar-right">
         <div class="btn-row desktop-contact">
           <a class="btn btn-call" href="tel:07711987399">📞 Call 07711 987399</a>
+          <a class="btn btn-email" href="mailto:Info@skwoodfloorspecialists.co.uk">✉️ Email Us</a>
           <a class="btn btn-whatsapp" href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
         </div>
 
@@ -502,6 +511,7 @@
         <a href="floor-restoration.html">Floor Restoration</a>
         <a href="parquet-herringbone.html">Parquet & Herringbone</a>
         <a href="#quote">Get Quote</a>
+        <a href="mailto:Info@skwoodfloorspecialists.co.uk">Email Us</a>
       </div>
     </div>
   </header>
@@ -523,6 +533,7 @@
 
       <div class="btn-row">
         <a href="tel:07711987399" class="btn btn-call">📞 Call Now</a>
+        <a href="mailto:Info@skwoodfloorspecialists.co.uk" class="btn btn-email">✉️ Email Us</a>
         <a href="https://wa.me/447711987399?text=Hi%20I%20need%20a%20flooring%20quote" class="btn btn-whatsapp" target="_blank" rel="noreferrer">💬 WhatsApp Quote</a>
       </div>
     </div>
@@ -542,7 +553,7 @@
     <div class="container">
       <h2 class="section-title">Get a Free Flooring Quote</h2>
       <p class="section-lead">
-        Send us your details below or message photos directly on WhatsApp for the quickest response.
+        Send us your details below or email/WhatsApp photos for the quickest response.
       </p>
 
       <div class="quote-box">
@@ -574,6 +585,13 @@
           <button type="submit">Get My Free Quote</button>
 
         </form>
+
+        <div class="btn-row" style="justify-content:center;margin-top:20px;">
+          <a href="tel:07711987399" class="btn btn-call">📞 Call</a>
+          <a href="mailto:Info@skwoodfloorspecialists.co.uk" class="btn btn-email">✉️ Email</a>
+          <a href="https://wa.me/447711987399" class="btn btn-whatsapp">💬 WhatsApp</a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -584,44 +602,44 @@
       <h2 class="section-title">Our Services</h2>
 
       <p class="section-lead">
-        Professional wood flooring services throughout London and the South East.
+        Professional wood flooring services throughout London, Kent, Surrey, Essex and East Sussex.
       </p>
 
       <div class="services-grid">
 
         <div class="service-box">
           <h3>Floor Sanding</h3>
-          <p>Restore tired wooden floors back to their natural beauty.</p>
+          <p>Restore tired wooden floors back to their natural beauty with professional sanding and finishing.</p>
           <a class="btn btn-dark" href="floor-sanding.html">Learn More</a>
         </div>
 
         <div class="service-box">
           <h3>Floor Installation</h3>
-          <p>Hardwood, engineered wood, parquet and herringbone installation.</p>
+          <p>Hardwood, engineered, parquet and herringbone flooring professionally installed.</p>
           <a class="btn btn-dark" href="floor-installation.html">Learn More</a>
         </div>
 
         <div class="service-box">
           <h3>Floor Restoration</h3>
-          <p>Repairs, refinishing and restoration of damaged timber flooring.</p>
+          <p>Bring damaged, worn and tired floors back to life with expert restoration.</p>
           <a class="btn btn-dark" href="floor-restoration.html">Learn More</a>
         </div>
 
         <div class="service-box">
           <h3>Parquet & Herringbone</h3>
-          <p>Traditional and modern parquet flooring expertly installed.</p>
+          <p>Traditional and contemporary parquet flooring fitted and finished to a high standard.</p>
           <a class="btn btn-dark" href="parquet-herringbone.html">Learn More</a>
         </div>
 
         <div class="service-box">
           <h3>Floor Repairs</h3>
-          <p>Board replacements, squeaks, gaps and damaged floor repairs.</p>
+          <p>Board replacements, squeaks, damaged flooring and restoration repairs.</p>
           <a class="btn btn-dark" href="floor-restoration.html">Learn More</a>
         </div>
 
         <div class="service-box">
           <h3>Fast WhatsApp Quotes</h3>
-          <p>Send photos directly for a quick estimate before arranging a visit.</p>
+          <p>Send photos directly for a quick estimate before arranging a site visit.</p>
           <a class="btn btn-whatsapp" href="https://wa.me/447711987399">Send Photos</a>
         </div>
 
@@ -637,24 +655,24 @@
       <h2 class="section-title">Products & Equipment We Use</h2>
 
       <p class="section-lead">
-        Professional equipment and premium finishing systems for exceptional results.
+        We use trusted professional products and machinery to deliver outstanding results.
       </p>
 
       <div class="brands-grid">
 
         <div class="brand-box">
           <h3>Bona</h3>
-          <p>Premium lacquers, primers and stains trusted throughout the industry.</p>
+          <p>Premium lacquers, primers, stains and floor finishing systems.</p>
         </div>
 
         <div class="brand-box">
           <h3>Junckers</h3>
-          <p>Professional floor finishing products designed for durability.</p>
+          <p>Professional finishing products known for durability and performance.</p>
         </div>
 
         <div class="brand-box">
           <h3>Lägler</h3>
-          <p>Industry-leading sanding machinery delivering superior finishes.</p>
+          <p>Industry-leading sanding machinery trusted by flooring professionals worldwide.</p>
         </div>
 
       </div>
@@ -670,7 +688,7 @@
       <h2 class="section-title">Recent Projects</h2>
 
       <p class="section-lead">
-        Real work completed by S&K Wood Floor Specialists.
+        Real flooring projects completed by S&K Wood Floor Specialists.
       </p>
 
       <div class="grid-3">
@@ -679,23 +697,23 @@
           <img src="images/HerringboneYoungs.jpg" alt="Herringbone flooring">
           <div class="card-body">
             <h3>Premium Herringbone Installation</h3>
-            <p>High-end parquet flooring finished to an exceptional standard.</p>
+            <p>High-end parquet flooring completed to an exceptional standard.</p>
           </div>
         </article>
 
         <article class="card">
-          <img src="images/20260330_141132.jpg" alt="Floor sanding project">
+          <img src="images/20260330_141132.jpg" alt="Floor restoration">
           <div class="card-body">
             <h3>Floor Restoration</h3>
-            <p>Restoring worn timber flooring back to life.</p>
+            <p>Bringing worn timber flooring back to life with professional sanding and finishing.</p>
           </div>
         </article>
 
         <article class="card">
-          <img src="images/FinishedHerringbone.jpg" alt="Finished floor">
+          <img src="images/FinishedHerringbone.jpg" alt="Finished flooring project">
           <div class="card-body">
             <h3>Completed Project</h3>
-            <p>Beautifully restored wooden flooring ready for years of use.</p>
+            <p>A beautifully restored floor ready for many years of use.</p>
           </div>
         </article>
 
@@ -715,24 +733,21 @@
 
         <div class="info-box">
           <p>
-            "Professionally done, very pleased with the result and Keir was keen
-            to ensure the end result was exactly what we were looking for."
+            "Professionally done, very pleased with the result and Keir was keen to ensure the end result was exactly what we were looking for."
           </p>
-          <div class="review-name">– Judy, Tunbridge Wells</div>
+          <div class="review-name">– Jane, Tunbridge Wells</div>
         </div>
 
         <div class="info-box">
           <p>
-            "Love my new floor. Keir and Steve were polite, helpful, tidy and
-            completed the work to a very high standard."
+            "Love my new floor. Keir and Steve were polite, helpful, tidy and completed the work to a very high standard."
           </p>
           <div class="review-name">– Denisa</div>
         </div>
 
         <div class="info-box">
           <p>
-            "Friendly, helpful, efficient and professional. We could not be more
-            pleased with the excellent service."
+            "Friendly, helpful, efficient and professional. We could not be more pleased with the excellent service."
           </p>
           <div class="review-name">– Teddy, London</div>
         </div>
@@ -757,12 +772,12 @@
 
         <div class="info-box">
           <h3>London</h3>
-          <p>Wood floor sanding and restoration throughout Greater London.</p>
+          <p>Professional wood floor sanding and restoration throughout Greater London.</p>
         </div>
 
         <div class="info-box">
           <h3>Kent</h3>
-          <p>Including Tunbridge Wells and surrounding areas.</p>
+          <p>Including Tunbridge Wells, Sevenoaks and surrounding areas.</p>
         </div>
 
         <div class="info-box">
@@ -783,12 +798,13 @@
       <h2>Ready To Transform Your Floors?</h2>
 
       <p>
-        Call today or send photos on WhatsApp for a fast free quote.
+        Call, email or WhatsApp us today for a free quote.
       </p>
 
       <div class="btn-row" style="justify-content:center;">
-        <a class="btn btn-light" href="tel:07711987399">📞 Call Now</a>
-        <a class="btn btn-dark" href="https://wa.me/447711987399">💬 WhatsApp</a>
+        <a href="tel:07711987399" class="btn btn-light">📞 Call</a>
+        <a href="mailto:Info@skwoodfloorspecialists.co.uk" class="btn btn-dark">✉️ Email</a>
+        <a href="https://wa.me/447711987399" class="btn btn-dark">💬 WhatsApp</a>
       </div>
 
     </div>
@@ -798,23 +814,66 @@
   <footer>
 
     <strong>S&K Wood Floor Specialists</strong><br>
+
     07711 987399<br>
-    Info@skwoodfloorspecialists.co.uk<br><br>
 
-    London • Kent • Surrey • Essex • East Sussex • Brighton • Hastings • Eastbourne
+    <a href="mailto:Info@skwoodfloorspecialists.co.uk">
+      Info@skwoodfloorspecialists.co.uk
+    </a>
 
-  </footer>
+    <br><br>
 
-  <div class="sticky-bar">
-    <a href="tel:07711987399" class="sticky-call">📞 Call</a>
-    <a href="https://wa.me/447711987399" class="sticky-whatsapp">💬 WhatsApp</a>
+    London • Kent • Surrey • Essex • East Sussex • Brighton • Hastings • Eastbourne • Tunbridge Wells
+
+    <div class="footer-links">
+
+      <a href="https://m.facebook.com/profile.php?id=61572397945474"
+         target="_blank"
+         rel="noreferrer">
+         Facebook
+      </a>
+
+    </div>
+
+    <div class="legal-info">
+
+      Company Number: 17258435<br>
+      Registered in England & Wales<br>
+      Fully Insured Wood Floor Sanding, Restoration & Installation Specialists
+
+    </div>
+
+  <footer>
+
+  <strong>S&K Wood Floor Specialists</strong><br>
+
+  07711 987399<br>
+
+  <a href="mailto:Info@skwoodfloorspecialists.co.uk">
+    Info@skwoodfloorspecialists.co.uk
+  </a>
+
+  <br><br>
+
+  London • Kent • Surrey • Essex • East Sussex • Brighton • Hastings • Eastbourne • Tunbridge Wells
+
+  <div class="footer-links">
+
+    <a href="https://m.facebook.com/profile.php?id=61572397945474"
+       target="_blank"
+       rel="noreferrer">
+       Facebook
+    </a>
+
   </div>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("show");
-    }
-  </script>
+  <div class="legal-info">
 
-</body>
-</html>
+    SKWOODFLOORINGSPECIALISTS LTD<br>
+    Company Number: 17258435<br>
+    Registered in England & Wales<br>
+    Fully Insured Wood Floor Sanding, Restoration & Installation Specialists
+
+  </div>
+
+  </footer>
