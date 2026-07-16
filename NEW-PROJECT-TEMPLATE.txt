@@ -1,0 +1,31 @@
+COPY THIS PROJECT OBJECT INTO js/projects-data.js
+
+Remember to add a comma between project objects.
+
+{
+  "id": "town-floor-type-service",
+  "title": "Pine Floor Sanding and Refinishing",
+  "location": "Town, County",
+  "service": "Floor sanding and refinishing",
+  "categories": ["sanding", "restoration", "pine", "residential"],
+  "summary": "A factual two-sentence description of the original condition, work completed and finished result.",
+  "floorType": "Original pine floorboards",
+  "finish": "Natural protective finish",
+  "duration": "3 working days",
+  "work": [
+    "Condition assessment",
+    "Progressive floor sanding",
+    "Edge and corner preparation",
+    "Minor repairs",
+    "Primer and protective finishing"
+  ],
+  "cover": "images/projects/town-floor-type-service/after.webp",
+  "before": "images/projects/town-floor-type-service/before.webp",
+  "after": "images/projects/town-floor-type-service/after.webp",
+  "gallery": [
+    "images/projects/town-floor-type-service/before.webp",
+    "images/projects/town-floor-type-service/progress.webp",
+    "images/projects/town-floor-type-service/after.webp"
+  ],
+  "url": "project.html?id=town-floor-type-service"
+}

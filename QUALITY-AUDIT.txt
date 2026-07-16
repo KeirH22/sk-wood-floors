@@ -1,0 +1,36 @@
+QUALITY AUDIT COMPLETED
+
+STRUCTURE
+- Shared CSS and JavaScript used across the site.
+- 10 core/support pages plus 6 permanent project pages.
+- Permanent project pages have unique titles, descriptions, share images and canonical URLs.
+- Dynamic project page retained as a fallback and marked noindex.
+
+LEAD GENERATION
+- Sanding is the priority service across the homepage, navigation, gallery and quote form.
+- All enquiry forms route to info@skwoodfloorspecialists.co.uk.
+- Forms include source tracking, spam honeypot, privacy consent and thank-you redirect.
+- WhatsApp photograph route is visible at each main conversion point.
+
+CONTENT ACCURACY
+- LVT removed.
+- Dust-controlled wording used instead of unsupported dust-free claims.
+- Engineered wood is described as requiring wear-layer assessment before sanding.
+- Restoration limitations and gap-filling limitations are stated honestly.
+
+TECHNICAL CHECKS
+- All local HTML, CSS, JavaScript and image references checked.
+- No missing local assets found.
+- No duplicate HTML IDs found.
+- JavaScript syntax checked with Node.
+- No remaining personal Hotmail form routes.
+- No corrupt source image included.
+- Images resized and converted to WebP.
+- Sitemap, robots.txt, privacy notice, manifest, 404 page and thank-you page included.
+
+MANUAL CHECKS STILL REQUIRED AFTER DEPLOYMENT
+- Confirm FormSubmit using the activation email sent to the business inbox.
+- Submit one real test enquiry.
+- Test the live site on an iPhone and Android phone.
+- Confirm Vercel uses the repository root as the published directory.
+- Confirm the company number, service areas and customer review wording remain correct.

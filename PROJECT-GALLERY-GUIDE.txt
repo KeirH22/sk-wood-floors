@@ -1,0 +1,49 @@
+HOW TO ADD A NEW PROJECT
+
+1. Create a new folder inside images/projects, for example:
+   images/projects/hassocks-pine-floor/
+
+2. Add optimised WebP photographs using simple names:
+   before.webp
+   progress.webp
+   after.webp
+   detail-1.webp
+
+3. Open js/projects-data.js.
+
+4. Copy one complete project object, paste it before the final closing bracket, and update:
+   id
+   title
+   location
+   service
+   categories
+   summary
+   floorType
+   finish
+   duration
+   work
+   cover
+   before
+   after
+   gallery
+
+5. Separate project objects with a comma.
+
+6. Upload the changed projects-data.js and the new project image folder to GitHub.
+
+CATEGORY OPTIONS
+sanding
+restoration
+parquet
+herringbone
+installation
+commercial
+residential
+pine
+
+The homepage, service pages, gallery filters and project detail page will update from that single data file.
+
+SHAREABLE PROJECT PAGES
+The six included projects have permanent HTML pages so Facebook can display the correct title, description and photograph.
+For a new project, the fast option is to use: project.html?id=YOUR-ID
+For the strongest Facebook preview and SEO, create a permanent project-YOUR-ID.html page or ask ChatGPT to generate it from the updated ZIP.
