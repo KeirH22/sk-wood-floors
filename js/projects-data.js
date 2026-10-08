@@ -65,7 +65,7 @@ window.SK_PROJECTS = [
   {
     "id": "pine-floor-sanding",
     "title": "Pine Floor Sanding and Natural Finish",
-    "location": "Residential project",
+    "location": "123 Sydney St, London SW3 6NR",
     "service": "Floor sanding and refinishing",
     "categories": [
       "sanding",
