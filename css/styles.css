@@ -225,3 +225,11 @@ h3 { font-size: 1.32rem; }
 /* Three-bar navigation on every screen size */
 .nav-links { display: none; }
 .menu-toggle { display: block; }
+
+.kate-cover img { max-height: 680px; object-fit: contain; background: var(--cream); }
+.kate-gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.kate-gallery figure { margin: 0; background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
+.kate-gallery img { width: 100%; height: auto; aspect-ratio: 3/4; object-fit: contain; }
+.kate-gallery figcaption { padding: 18px; font-weight: 650; }
+@media(max-width:900px) { .kate-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:560px) { .kate-gallery { grid-template-columns: 1fr; } }

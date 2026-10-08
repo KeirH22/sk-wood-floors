@@ -1,5 +1,38 @@
 window.SK_PROJECTS = [
   {
+    "id": "eastbourne-basketweave",
+    "title": "Basketweave Parquet Restoration in Eastbourne",
+    "location": "Eastbourne, East Sussex",
+    "service": "Parquet repairs, sanding and refinishing",
+    "categories": [
+      "sanding",
+      "restoration",
+      "parquet",
+      "residential"
+    ],
+    "summary": "An existing basketweave parquet hallway in Eastbourne was repaired, sanded and refinished to restore its pattern and natural timber colour.",
+    "floorType": "Basketweave finger-block parquet",
+    "finish": "Protective floor finish",
+    "duration": "Completed October 2026",
+    "work": [
+      "Localised parquet repairs",
+      "Progressive floor sanding",
+      "Edge and detail preparation",
+      "Protective refinishing"
+    ],
+    "cover": "images/projects/eastbourne-basketweave/finished-hallway.webp",
+    "before": "images/projects/eastbourne-basketweave/repair-preparation.webp",
+    "after": "images/projects/eastbourne-basketweave/finished-hallway.webp",
+    "gallery": [
+      "images/projects/eastbourne-basketweave/repair-preparation.webp",
+      "images/projects/eastbourne-basketweave/sanding-progress.webp",
+      "images/projects/eastbourne-basketweave/finished-hallway.webp",
+      "images/projects/eastbourne-basketweave/finished-detail.webp",
+      "images/projects/eastbourne-basketweave/finished-entrance.webp"
+    ],
+    "url": "project-eastbourne-basketweave-restoration.html"
+  },
+  {
     "id": "commercial-floor-sanding",
     "title": "Commercial Wood Floor Sanding",
     "location": "Commercial project",
