@@ -16,6 +16,7 @@
     </article>`;
 
   document.querySelectorAll('[data-project-grid]').forEach(grid => {
+    if (grid.dataset.projectRendered === 'true') return;
     const filter = grid.dataset.projectFilter || 'all';
     const limit = Number(grid.dataset.projectLimit || projects.length);
     const selected = projects.filter(p => filter === 'all' || p.categories.includes(filter)).slice(0, limit);
