@@ -202,3 +202,26 @@ h3 { font-size: 1.32rem; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* PDF branding and local navigation */
+.topbar { background: #fff; color: var(--ink); border-bottom: 1px solid var(--line); backdrop-filter: none; }
+.logo { width: 220px; height: 76px; overflow: hidden; }
+.logo img { width: 220px; height: auto; max-width: none; transform: translateY(-32px); align-self: flex-start; }
+.nav-links { gap: 14px; font-size: .88rem; }
+.nav-links > a:hover, .nav-links > a[aria-current="page"] { color: var(--gold-dark); }
+.menu-toggle { color: var(--ink); border-color: var(--line); }
+.mobile-menu { background: #fff; color: var(--ink); }
+.mobile-menu a { border-bottom-color: var(--line); }
+.mobile-menu .mobile-cta { color: #fff; }
+@media (max-width: 1180px) {
+  .nav-links { display: none; }
+  .menu-toggle { display: block; }
+}
+@media (max-width: 900px) {
+  .logo { width: 170px; height: 60px; }
+  .logo img { width: 170px; height: auto; transform: translateY(-25px); }
+}
+
+/* Three-bar navigation on every screen size */
+.nav-links { display: none; }
+.menu-toggle { display: block; }
