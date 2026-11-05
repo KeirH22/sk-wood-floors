@@ -122,3 +122,42 @@ em { font-style:italic;font-weight:400;color:var(--gold-dark) }
  .floor-option { gap:14px;grid-template-columns:24px minmax(0,1fr);padding-top:24px }.floor-option h3 { font-size:1.95rem }.fitting-steps { gap:28px 22px }.fitting-steps h3 { font-size:1.35rem }.fitting-steps p { font-size:.8rem }.section-title,.section-lead { text-align:left }.section-lead { font-size:.9rem }.footer { padding-top:48px }.footer-grid { gap:28px 20px }.footer-grid>div:first-child,.footer-grid>div:last-child { grid-column:1/-1 }.footer h3 { margin-bottom:15px }.footer-bottom { line-height:1.8 }
 }
 @media(max-width:360px) { .form-grid,.hero-copy .btn-row,.trust-grid,.fitting-steps { grid-template-columns:1fr }.trust-item+.trust-item { border-left:0 } }
+
+/* Present the original logo at its artwork bounds, rather than its white canvas. */
+:root { --header-height:142px }
+.topbar .nav { display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:24px;min-height:112px }
+.header-contact { justify-self:start;min-width:0 }
+.header-contact .header-phone { display:block;font-size:.92rem }
+.header-contact .header-phone span { font-size:.66rem;letter-spacing:.03em }
+.header-mobile-call { display:none }
+.topbar .logo { display:block;position:relative;width:226px;height:100px;overflow:visible;justify-self:center }
+.brand-art { display:block;position:relative;width:226px;height:100px;overflow:hidden }
+.topbar .logo img { position:absolute;left:-100px;top:-84px;width:370px;height:200px;max-width:none;transform:none }
+.topbar .header-actions { justify-self:end;justify-content:flex-end;min-width:0 }
+.homepage-floor-photo>img { object-position:50% 48% }
+.breadcrumbs { padding-block:14px;font-size:.69rem;line-height:1.65;color:var(--muted) }
+.breadcrumbs ol { display:flex;flex-wrap:wrap;gap:5px 10px;list-style:none;padding:0;margin:0 }
+.breadcrumbs li+li::before { content:"/";margin-right:10px;color:#a6a492 }
+.breadcrumbs a { border-bottom:1px solid #c8c5b8 }
+.breadcrumbs a:hover { color:var(--gold-dark) }
+.form-actions button:disabled { opacity:.65;cursor:progress }
+@media(max-width:1100px) { .topbar .header-quote { display:none } }
+@media(max-width:900px) {
+ :root { --header-height:114px }
+ .topbar .nav { min-height:86px;gap:16px }
+ .topbar .logo,.brand-art { width:174px;height:76px }
+ .topbar .logo img { width:285px;height:auto;left:-77px;top:-65px }
+ .header-contact .header-phone { font-size:.78rem }
+ .header-contact .header-phone span { font-size:.58rem }
+}
+@media(max-width:680px) {
+ .topbar .nav { grid-template-columns:minmax(0,1fr) 154px minmax(0,1fr);gap:10px }
+ .topbar .logo,.brand-art { width:154px;height:68px }
+ .topbar .logo img { width:252px;height:auto;left:-68px;top:-57px }
+ .header-contact .header-phone { display:none }
+ .header-mobile-call { display:inline-flex;align-items:center;gap:5px;min-height:44px;font-size:.65rem }
+ .topbar .menu-word { display:none }
+ .topbar .menu-toggle { min-width:44px;padding:10px 0 10px 12px;justify-content:flex-end }
+ .topbar .menu-icon { width:24px }
+ .breadcrumbs { padding-block:11px;font-size:.62rem }
+}
