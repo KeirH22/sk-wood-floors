@@ -53,6 +53,57 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('form[data-quote-form]').forEach(form => {
     const pageField = form.querySelector('input[name="source_page"]');
     if (pageField) pageField.value = document.title;
+
+    const parameters = new URLSearchParams(window.location.search);
+    const presetServices = {
+      sanding: 'Floor sanding and refinishing',
+      restoration: 'Floor restoration and repairs',
+      engineered: 'Engineered wood installation',
+      solid: 'Solid wood installation',
+      laminate: 'Laminate installation',
+      parquet: 'Parquet or herringbone installation'
+    };
+    const service = form.querySelector('select[name="service"]');
+    const preset = presetServices[parameters.get('service')];
+    if (service && preset && [...service.options].some(option => option.value === preset)) service.value = preset;
+
+    const addSourceField = (name, value) => {
+      if (!value) return;
+      const input = document.createElement('input');
+      input.type = 'hidden'; input.name = name; input.value = value;
+      form.append(input);
+    };
+    addSourceField('landing_page', window.location.origin + window.location.pathname);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(name => {
+      const value = parameters.get(name);
+      if (value) addSourceField(name, value.slice(0, 200));
+    });
+
+    const email = form.querySelector('input[type="email"]');
+    const contact = form.querySelector('select[name="preferred_contact"]');
+    const emailLabel = email && form.querySelector(`label[for="${email.id}"]`);
+    const updateContact = () => {
+      if (!email || !contact) return;
+      email.required = contact.value === 'Email';
+      if (emailLabel) emailLabel.textContent = email.required ? 'Email address *' : 'Email address';
+    };
+    contact?.addEventListener('change', updateContact);
+    updateContact();
+
+    const button = form.querySelector('button[type="submit"]');
+    const originalLabel = button?.textContent;
+    form.addEventListener('submit', event => {
+      if (form.dataset.submitting === 'true') { event.preventDefault(); return; }
+      if (!form.checkValidity()) return;
+      form.dataset.submitting = 'true';
+      form.setAttribute('aria-busy', 'true');
+      if (button) { button.disabled = true; button.textContent = 'Sending your enquiry…'; }
+    });
+    window.addEventListener('pageshow', () => {
+      delete form.dataset.submitting;
+      form.removeAttribute('aria-busy');
+      if (button) { button.disabled = false; button.textContent = originalLabel; }
+    });
   });
 
   document.querySelectorAll('[data-service]').forEach(link => {
